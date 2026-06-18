@@ -1,0 +1,5 @@
+.env
+*.bak
+*.tmp
+.DS_Store
+node_modules/
