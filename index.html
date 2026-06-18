@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
-:root{--navy-900:#0a0e17;--navy-800:#0f1a2e;--navy-700:#1e2d4d;--navy-600:#2a3f66;--gold-400:#c8a84e;--gold-300:#d4b86a;--gold-200:#e5c76b;--blue-400:#4a9eff;--blue-300:#6bb5ff;--steel-400:#3a5a8a;--steel-300:#5a7aaa;--text-primary:#e8e6e3;--text-secondary:#9a9a9a;--glass-bg:rgba(15,26,46,0.6);--glass-border:rgba(200,168,78,0.15);--card-bg:rgba(15,26,46,0.55);--card-border:rgba(200,168,78,0.12);--card-hover:rgba(30,45,77,0.7);--radius:16px;--radius-lg:24px;--transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);--font-sans:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;--navbar-height:72px}
+:root{--navy-900:#0a0e17;--navy-800:#0f1a2e;--navy-700:#1e2d4d;--navy-600:#2a3f66;--gold-400:#c8a84e;--gold-300:#d4b86a;--gold-200:#e5c76b;--blue-400:#4a9eff;--blue-300:#6bb5ff;--steel-400:#3a5a8a;--steel-300:#5a7aaa;--text-primary:#e8e6e3;--text-secondary:#9a9a9a;--glass-bg:rgba(15,26,46,0.6);--glass-border:rgba(200,168,78,0.15);--card-bg:rgba(15,26,46,0.85);--card-border:rgba(200,168,78,0.12);--card-hover:rgba(30,45,77,0.7);--radius:16px;--radius-lg:24px;--transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);--font-sans:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;--navbar-height:72px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--gold-400) var(--navy-900)}
 body{font-family:var(--font-sans);background:var(--navy-900);color:var(--text-primary);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -18,19 +18,19 @@ body{font-family:var(--font-sans);background:var(--navy-900);color:var(--text-pr
 .loading-logo{width:min(180px,40vw);height:auto;animation:logoPulse 1.2s ease-in-out infinite}
 @keyframes logoPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.7;transform:scale(0.96)}}
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--navbar-height);display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:transparent;transition:background 0.4s ease,box-shadow 0.4s ease}
-.navbar.scrolled{background:rgba(10,14,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(200,168,78,0.08)}
+.navbar.scrolled{background:rgba(10,14,23,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(200,168,78,0.08)}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo img{height:64px;width:auto;animation:logoSpin 6s linear infinite}
+.nav-logo img{height:72px;width:auto;animation:logoSpin 6s linear infinite}
 @keyframes logoSpin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
-.nav-logo-text{font-size:0.85rem;font-weight:600;color:var(--text-primary);letter-spacing:0.03em}
+.nav-logo-text{font-size:0.95rem;font-weight:600;color:var(--text-primary);letter-spacing:0.03em}
 .nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.3s ease;position:relative}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s ease;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold-400);transition:width 0.3s ease}
 .nav-links a:hover{color:var(--text-primary)}
 .nav-links a:hover::after{width:100%}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--text-primary);border-radius:1px;transition:all 0.3s ease}
-section{position:relative;padding:100px 40px;overflow:hidden}
+section{position:relative;padding:100px 40px}
 .section-label{font-size:0.75rem;font-weight:700;letter-spacing:0.15em;color:var(--gold-400);text-transform:uppercase;margin-bottom:12px}
 .section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:16px;color:var(--text-primary);letter-spacing:-0.02em}
 .section-subtitle{font-size:clamp(1rem,2vw,1.25rem);color:var(--text-secondary);font-weight:400;margin-bottom:48px;max-width:650px}
@@ -38,10 +38,10 @@ section{position:relative;padding:100px 40px;overflow:hidden}
 #hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--navbar-height) + 100px) 40px 40px;background:url('assets/images/hero-barge.jpg') center/cover no-repeat;background-attachment:fixed}
 #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,14,23,0.9) 0%,rgba(15,26,46,0.75) 50%,rgba(10,14,23,0.85) 100%);z-index:1}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;width:100%;max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.hero-logo{display:block;width:min(220px,45vw);height:auto;margin-bottom:-12px;margin-left:clamp(5rem,13vw,7.5rem);filter:drop-shadow(0 8px 30px rgba(0,0,0,0.4))}
-.hero-company{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;line-height:1.1;margin-bottom:8px}
-.hero-tagline{font-size:clamp(1rem,2.2vw,1.4rem);color:var(--gold-400);font-weight:600;margin-bottom:20px}
-.hero-desc{font-size:clamp(0.85rem,1.5vw,1rem);color:var(--text-secondary);margin-bottom:36px;line-height:1.8;max-width:520px}
+.hero-logo{display:block;width:min(280px,50vw);height:auto;margin-bottom:-12px;margin-left:clamp(5rem,13vw,7.5rem);filter:drop-shadow(0 8px 30px rgba(0,0,0,0.4))}
+.hero-company{font-size:clamp(2.6rem,8vw,4.2rem);font-weight:800;line-height:1.1;margin-bottom:8px;white-space:nowrap}
+.hero-tagline{font-size:clamp(1.2rem,3vw,1.8rem);color:var(--gold-400);font-weight:600;margin-bottom:20px;white-space:nowrap}
+.hero-desc{font-size:clamp(1rem,2vw,1.25rem);color:var(--text-secondary);margin-bottom:36px;line-height:1.8;max-width:520px}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
 .btn-primary,.btn-outline{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:12px;font-weight:600;font-size:.8rem;text-decoration:none;cursor:pointer;transition:all 0.3s ease;border:none;font-family:var(--font-sans)}
 .btn-primary{background:var(--gold-400);color:var(--navy-900)}
@@ -49,15 +49,15 @@ section{position:relative;padding:100px 40px;overflow:hidden}
 .btn-outline{background:transparent;border:2px solid var(--gold-400);color:var(--gold-400)}
 .btn-outline:hover{background:var(--gold-400);color:var(--navy-900)}
 .hero-inquiry{background:rgba(15,26,46,0.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:9px 10px;max-width:360px;margin-left:auto;opacity:0.8;margin-top:60px}
-.hero-inquiry h3{font-size:0.85rem;font-weight:700;margin:0;line-height:1.2}
-.hero-inquiry p{font-size:0.7rem;color:var(--text-secondary);margin:0 0 8px 0;line-height:1.2}
-.hero-inquiry .form-group{margin-bottom:8px}
-.hero-inquiry label{display:block;font-size:10px;font-weight:600;color:var(--text-secondary);margin-bottom:2px;text-transform:uppercase;letter-spacing:0.05em;transform:scale(0.8);transform-origin:left center}
-.hero-inquiry input,.hero-inquiry select{padding:3px 6px;font-size:10px;width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text-primary);outline:none;transition:border-color 0.3s ease;font-family:var(--font-sans);transform:scale(1);transform-origin:left center}
+.hero-inquiry h3{font-size:1rem;font-weight:700;margin:0;line-height:1.3}
+.hero-inquiry p{font-size:0.8rem;color:var(--text-secondary);margin:0 0 10px 0;line-height:1.3}
+.hero-inquiry .form-group{margin-bottom:10px}
+.hero-inquiry label{display:block;font-size:0.65rem;font-weight:600;color:var(--text-secondary);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em}
+.hero-inquiry input,.hero-inquiry select{padding:5px 8px;font-size:0.8rem;width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text-primary);outline:none;transition:border-color 0.3s ease;font-family:var(--font-sans)}
 .hero-inquiry input:focus,.hero-inquiry select:focus{border-color:var(--gold-400)}
-.hero-inquiry input::placeholder{font-size:0.6rem;color:var(--text-secondary);opacity:0.6}
+.hero-inquiry input::placeholder{font-size:0.7rem;color:var(--text-secondary);opacity:0.6}
 .hero-inquiry select option{background:var(--navy-800);color:var(--text-primary)}
-.hero-inquiry .btn-primary{width:100%;justify-content:center;margin-top:4px;padding:6px 12px;font-size:0.6rem}
+.hero-inquiry .btn-primary{width:100%;justify-content:center;margin-top:6px;padding:8px 14px;font-size:0.75rem}
 #problem{text-align:center;background:var(--navy-800)}
 #problem .container{max-width:800px}
 .problem-text{font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--text-secondary);line-height:1.8}
@@ -65,11 +65,11 @@ section{position:relative;padding:100px 40px;overflow:hidden}
 .problem-principle{margin-top:40px;padding:28px 40px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);display:inline-block;font-size:clamp(0.95rem,1.8vw,1.15rem);color:var(--gold-400);font-weight:600}
 #matrix{background:var(--navy-900)}
 .matrix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
-.matrix-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:36px 28px;text-align:center;position:relative;overflow:hidden;transition:all var(--transition);cursor:default}
+.matrix-card{background:rgba(15,26,46,0.9);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:36px 28px;text-align:center;position:relative;transition:all var(--transition);cursor:default}
 .matrix-card:hover{transform:translateY(-8px);border-color:var(--gold-400);box-shadow:0 20px 50px rgba(0,0,0,0.4),0 0 30px rgba(200,168,78,0.1)}
 .matrix-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold-400);opacity:0;transition:opacity var(--transition)}
 .matrix-card:hover::before{opacity:1}
-.matrix-icon{font-size:2.2rem;margin-bottom:16px;display:block}
+.matrix-icon{width:56px;height:56px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;background:rgba(200,168,78,0.1);border:1px solid rgba(200,168,78,0.2);border-radius:50%;font-size:1.4rem}
 .matrix-card h3{font-size:1.15rem;font-weight:700;margin-bottom:12px;color:var(--gold-400)}
 .matrix-card p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7}
 #coordinates{background:var(--navy-800)}
@@ -173,20 +173,19 @@ section{position:relative;padding:100px 40px;overflow:hidden}
 footer{text-align:center;padding:48px 40px;border-top:1px solid var(--glass-border);color:var(--text-secondary);font-size:0.8rem}
 footer .tagline{color:var(--gold-400);font-size:0.85rem;margin-top:8px}
 .floating-cards{position:fixed;bottom:10px;right:24px;z-index:999;display:flex;flex-direction:column;gap:0}
-.float-card{background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:var(--radius);width:100px;padding:4px 8px;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);position:relative;margin-bottom:-12px;opacity:0.8}
+.float-card{background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:var(--radius);width:130px;padding:6px 10px;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);position:relative;margin-bottom:-8px;opacity:0.8}
 .float-card:last-child{margin-bottom:0}
 .float-card.focused{margin-bottom:0;border-color:var(--gold-400);box-shadow:0 8px 30px rgba(200,168,78,0.2);z-index:10}
-.float-card.expanded{width:100px;padding:4px 8px;margin-bottom:12px}
-.float-header{display:flex;align-items:center;gap:8px}
-.float-icon{font-size:0.9rem}
-.float-title{font-size:0.65rem;font-weight:700;color:var(--gold-400)}
+.float-card.expanded{width:130px;padding:6px 10px;margin-bottom:12px}
+.float-header{display:flex;align-items:center;gap:10px}
+.float-title{font-size:0.75rem;font-weight:700;color:var(--gold-400)}
 .float-body,.float-cta{overflow:hidden;max-height:0;opacity:0;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1),opacity 0.5s cubic-bezier(0.4,0,0.2,1)}
-.float-body{margin-top:8px;font-size:0.6rem;color:var(--text-secondary);line-height:1.4}
+.float-body{margin-top:8px;font-size:0.7rem;color:var(--text-secondary);line-height:1.4}
 .float-card:hover .float-body,.float-card.expanded .float-body{max-height:120px;opacity:1}
-.float-card .float-cta{display:block;margin-top:8px;font-size:0.6rem;color:var(--gold-400);font-weight:600}
+.float-card .float-cta{display:block;margin-top:8px;font-size:0.7rem;color:var(--gold-400);font-weight:600}
 .float-card:hover .float-cta,.float-card.expanded .float-cta{max-height:50px;opacity:1}
 @media(max-width:1024px){.matrix-grid,.coal-grid{grid-template-columns:repeat(2,1fr)}.coord-grid{grid-template-columns:1fr}.vm-grid{grid-template-columns:1fr}.corridor-grid{grid-template-columns:1fr}.docs-grid{grid-template-columns:1fr}.journey-step{width:280px}}
-@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--navbar-height);left:0;right:0;background:rgba(10,14,23,0.96);backdrop-filter:blur(16px);padding:24px 40px;gap:20px;border-bottom:1px solid var(--glass-border)}section{padding:80px 24px}.hero-grid{grid-template-columns:1fr;gap:40px}#hero,#coal-checker,#docs{background-attachment:scroll}.matrix-grid,.coal-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-wrapper{padding:28px}.contact-grid{grid-template-columns:1fr}.why-us-grid{grid-template-columns:1fr}.journey-step{width:260px}.floating-cards{bottom:40px;right:16px}.float-card{width:100px}.float-card.expanded{width:100px}.corridor-stats{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--navbar-height);left:0;right:0;background:rgba(10,14,23,0.96);backdrop-filter:blur(16px);padding:24px 40px;gap:20px;border-bottom:1px solid var(--glass-border)}section{padding:80px 24px}.hero-grid{grid-template-columns:1fr;gap:40px}#hero,#coal-checker,#docs{background-attachment:scroll}.matrix-grid,.coal-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-wrapper{padding:28px}.contact-grid{grid-template-columns:1fr}.why-us-grid{grid-template-columns:1fr}.journey-step{width:260px}.floating-cards{bottom:40px;right:16px}.float-card{width:130px}.float-card.expanded{width:130px}.corridor-stats{grid-template-columns:1fr}}
 @media(max-width:480px){section{padding:60px 16px}.hero{padding:calc(var(--navbar-height) + 20px) 16px 40px}.hero-actions{flex-direction:column}.btn-primary,.btn-outline{width:100%;justify-content:center}.problem-principle{padding:20px 24px}.journey-step{width:240px}#journey .container{padding:0 16px}#journey .section-label,#journey .section-title,#journey .section-subtitle{padding:0 16px}.journey-step:first-child{margin-left:16px}.journey-step:last-child{margin-right:16px}.contact-snapshot{padding:24px}.closing-block{padding:24px}}
 </style>
 </head>
@@ -233,10 +232,10 @@ footer .tagline{color:var(--gold-400);font-size:0.85rem;margin-top:8px}
 <h2 class="section-title">Risk-Managed Execution</h2>
 <p class="section-subtitle">Quality &middot; Quantity &middot; Timeline &middot; Settlement — the four pillars of disciplined coal trading.</p>
 <div class="matrix-grid">
-<div class="matrix-card"><span class="matrix-icon">&#9670;</span><h3>Quality</h3><p>Koordinasi sampling, sealing, inspection, dan verifikasi COA untuk memastikan spesifikasi kargo sesuai kebutuhan buyer.</p></div>
-<div class="matrix-card"><span class="matrix-icon">&#9633;</span><h3>Quantity</h3><p>Koordinasi draft survey, toleransi kuantitas, dan rekonsiliasi loading untuk meminimalkan potensi dispute.</p></div>
-<div class="matrix-card"><span class="matrix-icon">&#9200;</span><h3>Timeline</h3><p>Penyelarasan kesiapan stockpile, jetty, laycan, loading plan, dan jadwal kapal agar eksekusi berjalan lebih terkontrol.</p></div>
-<div class="matrix-card"><span class="matrix-icon">&#9878;</span><h3>Settlement</h3><p>Penyusunan dokumen transaksi (invoice, B/L, COA, draft survey) agar proses pembayaran berjalan lancar sesuai terms kontrak.</p></div>
+<div class="matrix-card"><span class="matrix-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Quality</h3><p>Koordinasi sampling, sealing, inspection, dan verifikasi COA untuk memastikan spesifikasi kargo sesuai kebutuhan buyer.</p></div>
+<div class="matrix-card"><span class="matrix-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 3v18"/></svg></span><h3>Quantity</h3><p>Koordinasi draft survey, toleransi kuantitas, dan rekonsiliasi loading untuk meminimalkan potensi dispute.</p></div>
+<div class="matrix-card"><span class="matrix-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3>Timeline</h3><p>Penyelarasan kesiapan stockpile, jetty, laycan, loading plan, dan jadwal kapal agar eksekusi berjalan lebih terkontrol.</p></div>
+<div class="matrix-card"><span class="matrix-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></span><h3>Settlement</h3><p>Penyusunan dokumen transaksi (invoice, B/L, COA, draft survey) agar proses pembayaran berjalan lancar sesuai terms kontrak.</p></div>
 </div>
 </div>
 </section>
@@ -392,18 +391,18 @@ footer .tagline{color:var(--gold-400);font-size:0.85rem;margin-top:8px}
 </section>
 
 <div class="floating-cards" id="floatingCards">
-<div class="float-card" data-card="gar" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M3 3v18h18"/><path d="m7 16 4-8 4 4 4-6"/></svg><span class="float-title">GAR Guide</span></div><div class="float-body"><p>Coal grades from 3,400 to 6,500+ GAR. Benchmark vs COA-based. Our team helps you match the right grade to your boiler spec.</p></div><div class="float-cta">Explore Grades &rarr;</div></div>
-<div class="float-card" data-card="quantity" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h18M9 3v18"/></svg><span class="float-title">Quantity</span></div><div class="float-body"><p>20,000&ndash;50,000 MT/month planned capacity — scalable with repeat execution. Draft survey reconciliation at loading ensures accuracy.</p></div><div class="float-cta">Submit Requirement &rarr;</div></div>
-<div class="float-card" data-card="laycan" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="float-title">Laycan</span></div><div class="float-body"><p>Vessel schedule aligned with stockpile readiness. We coordinate jetty slots, barging, and transshipment to meet your laycan window.</p></div><div class="float-cta">Check Timeline &rarr;</div></div>
-<div class="float-card" data-card="docs" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span class="float-title">Docs</span></div><div class="float-body"><p>FOB-ready package: Invoice, B/L, COA, Draft Survey. Consistent documentation = smooth settlement. LC or TT against documents.</p></div><div class="float-cta">View FOB Terms &rarr;</div></div>
+<div class="float-card" data-card="gar" tabindex="0"><div class="float-header"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M3 3v18h18"/><path d="m7 16 4-8 4 4 4-6"/></svg><span class="float-title">GAR Guide</span></div><div class="float-body"><p>Coal grades from 3,400 to 6,500+ GAR. Benchmark vs COA-based. Our team helps you match the right grade to your boiler spec.</p></div><div class="float-cta">Explore Grades &rarr;</div></div>
+<div class="float-card" data-card="quantity" tabindex="0"><div class="float-header"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h18M9 3v18"/></svg><span class="float-title">Quantity</span></div><div class="float-body"><p>20,000&ndash;50,000 MT/month planned capacity — scalable with repeat execution. Draft survey reconciliation at loading ensures accuracy.</p></div><div class="float-cta">Submit Requirement &rarr;</div></div>
+<div class="float-card" data-card="laycan" tabindex="0"><div class="float-header"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="float-title">Laycan</span></div><div class="float-body"><p>Vessel schedule aligned with stockpile readiness. We coordinate jetty slots, barging, and transshipment to meet your laycan window.</p></div><div class="float-cta">Check Timeline &rarr;</div></div>
+<div class="float-card" data-card="docs" tabindex="0"><div class="float-header"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span class="float-title">Docs</span></div><div class="float-body"><p>FOB-ready package: Invoice, B/L, COA, Draft Survey. Consistent documentation = smooth settlement. LC or TT available.</p></div><div class="float-cta">View FOB Terms &rarr;</div></div></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-function hL(){var ls=document.getElementById('loadingScreen');if(ls)ls.classList.add('hidden')}window.addEventListener('load',function(){setTimeout(hL,800)});setTimeout(hL,3000);
+function hL(){var ls=document.getElementById('loadingScreen');if(ls)ls.classList.add('hidden');if(typeof ScrollTrigger!=='undefined'){ScrollTrigger.refresh();var mc=document.querySelector('#matrix .matrix-grid');if(mc&&mc.getBoundingClientRect().top<window.innerHeight)gsap.set('.matrix-card',{clearProps:'opacity,transform'});var cc=document.querySelector('#coal-checker .coal-grid');if(cc&&cc.getBoundingClientRect().top<window.innerHeight)gsap.set('.coal-card',{clearProps:'opacity,transform'})}}window.addEventListener('load',function(){setTimeout(hL,800)});setTimeout(hL,3000);
 (function(){var n=document.getElementById('navbar'),h=document.getElementById('hamburger'),l=document.getElementById('navLinks');window.addEventListener('scroll',function(){window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled')});h.addEventListener('click',function(){l.classList.toggle('open')});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})})})();
-(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined')return;gsap.registerPlugin(ScrollTrigger);gsap.from('.hero-logo',{y:60,opacity:0,duration:1,delay:0.4});gsap.from('.hero-company',{y:40,opacity:0,duration:0.9,delay:0.6});gsap.from('.hero-tagline',{y:30,opacity:0,duration:0.8,delay:0.8});gsap.from('.hero-desc',{y:30,opacity:0,duration:0.8,delay:1.0});gsap.from('.hero-actions',{y:20,opacity:0,duration:0.7,delay:1.2});gsap.from('.hero-inquiry',{x:40,opacity:0,duration:0.9,delay:1.0});document.querySelectorAll('section').forEach(function(s){if(s.id==='hero'||s.id==='journey')return;gsap.from(s.querySelector('.section-label, .section-title, .section-subtitle'),{y:40,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:s,start:'top 80%',once:true}})});gsap.from('.matrix-card',{y:60,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:'#matrix',start:'top 75%',once:true}});gsap.from('.coord-card',{y:50,opacity:0,duration:0.7,stagger:0.15,scrollTrigger:{trigger:'#coordinates',start:'top 75%',once:true}});gsap.from('.corridor-map',{x:-40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.corridor-info',{x:40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.coal-card',{y:50,opacity:0,duration:0.7,stagger:0.1,scrollTrigger:{trigger:'#coal-checker',start:'top 80%',once:true}});gsap.from('.docs-col',{y:40,opacity:0,duration:0.8,stagger:0.2,scrollTrigger:{trigger:'#docs',start:'top 75%',once:true}});gsap.from('.form-wrapper',{y:40,opacity:0,duration:0.8,scrollTrigger:{trigger:'#form',start:'top 80%',once:true}});gsap.from('.why-us-item',{y:30,opacity:0,duration:0.6,stagger:0.1,scrollTrigger:{trigger:'.why-us-grid',start:'top 85%',once:true}});gsap.from('.closing-block',{y:30,opacity:0,duration:0.8,scrollTrigger:{trigger:'.closing-block',start:'top 85%',once:true}})})();
+(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined')return;gsap.registerPlugin(ScrollTrigger);gsap.from('.hero-logo',{y:60,opacity:0,duration:1,delay:0.4});gsap.from('.hero-company',{y:40,opacity:0,duration:0.9,delay:0.6});gsap.from('.hero-tagline',{y:30,opacity:0,duration:0.8,delay:0.8});gsap.from('.hero-desc',{y:30,opacity:0,duration:0.8,delay:1.0});gsap.from('.hero-actions',{y:20,opacity:0,duration:0.7,delay:1.2});gsap.from('.hero-inquiry',{x:40,opacity:0,duration:0.9,delay:1.0});document.querySelectorAll('section').forEach(function(s){if(s.id==='hero'||s.id==='journey')return;gsap.from(s.querySelector('.section-label, .section-title, .section-subtitle'),{y:40,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:s,start:'top 80%',once:true}})});gsap.from('.matrix-card',{y:60,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:'#matrix',start:'top 75%',once:true,invalidateOnRefresh:true}});gsap.from('.coord-card',{y:50,opacity:0,duration:0.7,stagger:0.15,scrollTrigger:{trigger:'#coordinates',start:'top 75%',once:true}});gsap.from('.corridor-map',{x:-40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.corridor-info',{x:40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.coal-card',{y:50,opacity:0,duration:0.7,stagger:0.1,scrollTrigger:{trigger:'#coal-checker',start:'top 80%',once:true,invalidateOnRefresh:true}});gsap.from('.docs-col',{y:40,opacity:0,duration:0.8,stagger:0.2,scrollTrigger:{trigger:'#docs',start:'top 75%',once:true}});gsap.from('.form-wrapper',{y:40,opacity:0,duration:0.8,scrollTrigger:{trigger:'#form',start:'top 80%',once:true}});gsap.from('.why-us-item',{y:30,opacity:0,duration:0.6,stagger:0.1,scrollTrigger:{trigger:'.why-us-grid',start:'top 85%',once:true}});gsap.from('.closing-block',{y:30,opacity:0,duration:0.8,scrollTrigger:{trigger:'.closing-block',start:'top 85%',once:true}})})();
 (function(){var cards=document.querySelectorAll('.float-card'),idx=-1;function focusCard(i){cards.forEach(function(c,j){c.classList.remove('focused');if(j===i){c.classList.add('focused');c.focus()}})}document.addEventListener('keydown',function(e){var a=document.activeElement;if(!a||!a.classList.contains('float-card'))return;var i=Array.from(cards).indexOf(a);if(i===-1)return;if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();focusCard((i+1)%cards.length)}else if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();focusCard((i-1+cards.length)%cards.length)}else if(e.key==='Enter'){e.preventDefault();a.classList.toggle('expanded')}else if(e.key==='Escape'){e.preventDefault();a.classList.remove('expanded');a.blur()}});cards.forEach(function(c){c.addEventListener('click',function(e){e.stopPropagation();var was=c.classList.contains('expanded');cards.forEach(function(x){x.classList.remove('expanded')});if(!was)c.classList.add('expanded')})});document.addEventListener('click',function(e){if(!e.target.closest('.floating-cards')){cards.forEach(function(x){x.classList.remove('expanded')})}})})();
 (function(){document.querySelectorAll('.coal-card').forEach(function(c){c.addEventListener('click',function(){document.querySelectorAll('.coal-card').forEach(function(x){x.classList.remove('highlight')});c.classList.add('highlight');if(c.getAttribute('data-grade')==='custom')window.location.href='#form'})})})();
 (function(){var t=document.getElementById('journeyTrack'),p=document.getElementById('journeyPrev'),n=document.getElementById('journeyNext'),cards=t?t.querySelectorAll('.journey-card'):[],sw=320+24;if(!t||!p||!n)return;p.addEventListener('click',function(){t.scrollBy({left:-sw*2,behavior:'smooth'})});n.addEventListener('click',function(){t.scrollBy({left:sw*2,behavior:'smooth'})});t.addEventListener('scroll',function(){var sl=t.scrollLeft,c=sl+t.offsetWidth/2,closest=null,cd=Infinity;cards.forEach(function(card){var step=card.closest('.journey-step'),cc=step.offsetLeft+step.offsetWidth/2,d=Math.abs(cc-c);if(d<cd){cd=d;closest=card}});cards.forEach(function(x){x.classList.remove('active')});if(closest)closest.classList.add('active')})})();
