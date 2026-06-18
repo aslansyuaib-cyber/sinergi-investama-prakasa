@@ -1,0 +1,35 @@
+/* PT. Sinergi Investama Prakasa — Main Stylesheet */
+:root {
+  /* Brand Colors */
+  --primary: #1a3a5c;
+  --secondary: #c8a84e;
+  --accent: #e5c76b;
+  --dark: #0f1f33;
+  --light: #f5f3ef;
+  --text: #2d2d2d;
+  --text-light: #6b6b6b;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-main: 'Inter', -apple-system, sans-serif;
+  --font-heading: 'Inter', -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-padding: 6rem 2rem;
+  --container: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+section { padding: var(--section-padding); }

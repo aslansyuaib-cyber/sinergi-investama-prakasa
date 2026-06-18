@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
+  <!-- Coal barge silhouette -->
+  <!-- Hull -->
+  <path d="M 10 70 C 10 65, 15 55, 25 50
+           L 275 50 C 285 55, 290 65, 290 70
+           L 290 85 C 290 90, 285 95, 280 95
+           L 20 95 C 15 95, 10 90, 10 85 Z"
+        fill="currentColor" opacity="0.85"/>
+  <!-- Cargo coal pile -->
+  <path d="M 45 50 C 55 30, 85 25, 120 28
+           C 150 30, 170 28, 200 30
+           C 230 32, 255 35, 260 50 Z"
+        fill="currentColor" opacity="0.6"/>
+  <!-- Deck line -->
+  <line x1="30" y1="50" x2="270" y2="50" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+  <!-- Tug line -->
+  <line x1="10" y1="72" x2="2" y2="65" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Digital Grid Background -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="0.5" fill="currentColor" opacity="0.08"/>
+    <line x1="30" y1="15" x2="800" y2="15" stroke="currentColor" stroke-width="0.3" opacity="0.03"/>
+    <line x1="15" y1="30" x2="15" y2="500" stroke="currentColor" stroke-width="0.3" opacity="0.03"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Connection lines (network style) -->
+  <!-- Kalimantan Hub connections -->
+  <g opacity="0.3">
+    <!-- To Sumatra -->
+    <path d="M 280 250 Q 200 220, 140 240" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+    <!-- To Java -->
+    <path d="M 300 280 Q 280 330, 260 370" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+    <!-- To Sulawesi -->
+    <path d="M 400 240 Q 480 220, 540 230" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+    <!-- To Papua -->
+    <path d="M 420 260 Q 550 280, 680 270" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+    <!-- International routes -->
+    <path d="M 140 240 Q 80 200, 40 160" stroke="currentColor" stroke-width="0.8" fill="none" stroke-dasharray="2,5" opacity="0.5"/>
+    <path d="M 680 270 Q 730 260, 770 240" stroke="currentColor" stroke-width="0.8" fill="none" stroke-dasharray="2,5" opacity="0.5"/>
+    <!-- Kalimantan internal corridor -->
+    <path d="M 250 220 Q 310 210, 380 230" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Data flow particles on connections -->
+  <circle r="2.5" fill="currentColor" opacity="0.6">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M 280 250 Q 200 220, 140 240"/>
+  </circle>
+  <circle r="2" fill="currentColor" opacity="0.4">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M 300 280 Q 280 330, 260 370"/>
+  </circle>
+  <circle r="2" fill="currentColor" opacity="0.5">
+    <animateMotion dur="3.5s" repeatCount="indefinite" path="M 400 240 Q 480 220, 540 230"/>
+  </circle>
+
+  <!-- Island Nodes (simplified outlines) -->
+  <!-- Sumatra -->
+  <path d="M 100 180 C 120 175, 145 195, 150 220 C 155 245, 145 270, 135 290 C 125 310, 110 300, 105 280 C 100 260, 95 240, 95 220 C 95 200, 100 185, 100 180 Z" 
+        stroke="currentColor" stroke-width="0.8" opacity="0.25" fill="none"/>
+  <!-- Kalimantan (highlighted) -->
+  <path d="M 240 200 C 265 195, 290 200, 310 210 C 330 220, 370 220, 390 230 C 410 240, 420 260, 410 275 C 400 290, 370 295, 350 290 C 330 285, 300 285, 280 280 C 260 275, 235 270, 225 255 C 215 240, 220 215, 240 200 Z" 
+        stroke="currentColor" stroke-width="2" opacity="0.8" fill="none"/>
+  <!-- Kalimantan glow -->
+  <path d="M 240 200 C 265 195, 290 200, 310 210 C 330 220, 370 220, 390 230 C 410 240, 420 260, 410 275 C 400 290, 370 295, 350 290 C 330 285, 300 285, 280 280 C 260 275, 235 270, 225 255 C 215 240, 220 215, 240 200 Z" 
+        stroke="currentColor" stroke-width="6" opacity="0.15" fill="none" filter="url(#glow)"/>
+  <!-- Java -->
+  <path d="M 220 320 C 240 315, 270 320, 300 325 C 330 330, 360 325, 380 320 C 400 315, 400 330, 380 335 C 360 340, 330 340, 300 338 C 270 336, 240 335, 220 332 C 200 329, 210 322, 220 320 Z" 
+        stroke="currentColor" stroke-width="0.8" opacity="0.25" fill="none"/>
+  <!-- Sulawesi -->
+  <path d="M 520 180 C 540 185, 560 200, 565 220 C 570 240, 560 260, 550 275 C 540 290, 530 300, 520 290 C 510 280, 505 260, 505 240 C 505 220, 510 200, 520 180 Z" 
+        stroke="currentColor" stroke-width="0.8" opacity="0.25" fill="none"/>
+  <!-- Papua -->
+  <path d="M 650 230 C 670 225, 700 230, 720 240 C 740 250, 750 265, 740 280 C 730 295, 700 295, 680 290 C 660 285, 640 275, 635 260 C 630 245, 640 235, 650 230 Z" 
+        stroke="currentColor" stroke-width="0.8" opacity="0.2" fill="none"/>
+
+  <!-- Hub Nodes -->
+  <!-- Kalimantan Hub (large, pulsing) -->
+  <circle cx="310" cy="245" r="8" fill="currentColor" opacity="0.9"/>
+  <circle cx="310" cy="245" r="14" stroke="currentColor" stroke-width="1" opacity="0.3" fill="none"/>
+  <circle cx="310" cy="245" r="6" fill="currentColor" opacity="0.3" class="pulse">
+    <animate attributeName="r" values="6;14;6" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.05;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Kalsel node -->
+  <circle cx="270" cy="278" r="4" fill="currentColor" opacity="0.7"/>
+  <text x="248" y="295" font-size="9" fill="currentColor" opacity="0.5" font-family="system-ui">KALSEL</text>
+
+  <!-- Kaltim node -->
+  <circle cx="370" cy="228" r="4" fill="currentColor" opacity="0.7"/>
+  <text x="370" y="218" font-size="9" fill="currentColor" opacity="0.5" font-family="system-ui">KALTIM</text>
+
+  <!-- Kalteng node -->
+  <circle cx="310" cy="255" r="3" fill="currentColor" opacity="0.5"/>
+
+  <!-- Regional nodes -->
+  <circle cx="145" cy="238" r="3" fill="currentColor" opacity="0.3"/>
+  <text x="125" y="232" font-size="8" fill="currentColor" opacity="0.25" font-family="system-ui">Sumatra</text>
+  <circle cx="300" cy="328" r="3" fill="currentColor" opacity="0.3"/>
+  <text x="285" y="348" font-size="8" fill="currentColor" opacity="0.25" font-family="system-ui">Java</text>
+  <circle cx="540" cy="235" r="3" fill="currentColor" opacity="0.3"/>
+  <text x="535" y="225" font-size="8" fill="currentColor" opacity="0.25" font-family="system-ui">Sulawesi</text>
+
+  <!-- International arrows -->
+  <text x="20" y="140" font-size="8" fill="currentColor" opacity="0.2" font-family="system-ui">→ Global Market</text>
+  <text x="720" y="230" font-size="8" fill="currentColor" opacity="0.2" font-family="system-ui">Pacific →</text>
+
+  <!-- Data hex overlay -->
+  <g opacity="0.04">
+    <text x="250" y="180" font-size="6" font-family="monospace" fill="currentColor">01 0A 3F 8C</text>
+    <text x="350" y="310" font-size="6" font-family="monospace" fill="currentColor">B4 2D 7E 10</text>
+    <text x="200" y="360" font-size="6" font-family="monospace" fill="currentColor">FF 92 4A 61</text>
+    <text x="450" y="200" font-size="6" font-family="monospace" fill="currentColor">38 C5 90 DF</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="460" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.3" font-family="system-ui" letter-spacing="0.2em">INDONESIA SOURCING NETWORK</text>
+</svg>

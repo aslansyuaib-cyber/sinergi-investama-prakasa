@@ -2,1784 +2,416 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PT. Sinergi Investama Prakasa — Coal Trading & Supply Chain Solutions. Indonesian coal supplier with operations across Kalimantan.">
-<title>PT. Sinergi Investama Prakasa — Coal Trading Excellence</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="PT. Sinergi Investama Prakasa — Coal Trading & Risk-Managed Supply Chain Partner">
+<title>PT. Sinergi Investama Prakasa — Coal Trading & Risk-Managed Supply Chain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
-/* ============================================
-   CSS CUSTOM PROPERTIES
-   ============================================ */
-:root {
-  --navy-deep: #0a1628;
-  --navy: #0f1f33;
-  --navy-light: #1a3a5c;
-  --navy-surface: #152840;
-  --gold: #c8a84e;
-  --gold-bright: #d4af37;
-  --gold-light: #e5c76b;
-  --gold-dim: #a8893c;
-  --text-primary: #e8e9eb;
-  --text-secondary: #b0b2b6;
-  --text-muted: #6b7280;
-  --glass-bg: rgba(15, 31, 51, 0.45);
-  --glass-border: rgba(200, 168, 78, 0.15);
-  --glass-highlight: rgba(200, 168, 78, 0.08);
-  --card-bg: rgba(21, 40, 64, 0.6);
-  --card-border: rgba(200, 168, 78, 0.12);
-  --radius: 16px;
-  --radius-lg: 24px;
-  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-}
-
-/* ============================================
-   RESET & BASE
-   ============================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--gold-dim) var(--navy-deep); }
-body {
-  font-family: var(--font-body);
-  background: var(--navy-deep);
-  color: var(--text-primary);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--navy-deep); }
-::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
-
-a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
-a:hover { color: var(--gold-light); }
-img { max-width: 100%; display: block; }
-.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
-.section-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-  position: relative;
-  padding-left: 48px;
-}
-.section-label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 36px;
-  height: 1px;
-  background: var(--gold);
-  transform: translateY(-50%);
-}
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.15;
-  margin-bottom: 24px;
-  color: var(--text-primary);
-}
-.section-title .gold { color: var(--gold); }
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 48px;
-}
-
-/* ============================================
-   NAVBAR — Glassmorphism Sticky
-   ============================================ */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 16px 0;
-  transition: all 0.4s ease;
-}
-.navbar.scrolled {
-  background: rgba(10, 22, 40, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
-  padding: 10px 0;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-}
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.nav-logo img { height: 64px; width: auto; }
-.nav-links {
-  display: none;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
-}
-@media (min-width: 1024px) { .nav-links { display: flex; } }
-.nav-links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  position: relative;
-  padding: 4px 0;
-  transition: color 0.3s;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--gold);
-  transition: width 0.3s ease;
-}
-.nav-links a:hover { color: var(--text-primary); }
-.nav-links a:hover::after { width: 100%; }
-.nav-cta {
-  background: var(--gold);
-  color: var(--navy-deep) !important;
-  padding: 10px 24px !important;
-  border-radius: 8px;
-  font-weight: 600 !important;
-  font-size: 0.85rem;
-  transition: all 0.3s !important;
-}
-.nav-cta:hover {
-  background: var(--gold-light) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(200, 168, 78, 0.25);
-}
-.mobile-toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 1001;
-}
-@media (min-width: 1024px) { .mobile-toggle { display: none; } }
-.mobile-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-.mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.mobile-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
-  background: rgba(10, 22, 40, 0.97);
-  backdrop-filter: blur(30px);
-  padding: 100px 32px 40px;
-  z-index: 999;
-  transition: right 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.mobile-menu.open { right: 0; }
-.mobile-menu a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  padding: 12px 0;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-/* ============================================
-   HERO — Video BG / Animated Gradient
-   ============================================ */
-.hero {
-  position: relative;
-  height: 100vh;
-  min-height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #0a1628 0%, #0f1f33 30%, #152840 60%, #0f1f33 100%);
-  z-index: 0;
-}
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(200,168,78,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 30%, rgba(26,58,92,0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(200,168,78,0.04) 0%, transparent 40%);
-  animation: heroGlow 8s ease-in-out infinite alternate;
-}
-@keyframes heroGlow {
-  0% { opacity: 0.6; }
-  100% { opacity: 1; }
-}
-/* Particle dust effect */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(10,22,40,0.2) 0%, rgba(10,22,40,0.6) 60%, var(--navy-deep) 100%);
-  z-index: 2;
-}
-.hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  max-width: 900px;
-  padding: 0 24px;
-}
-/* Hero logo */
-.hero-logo {
-  width: min(320px, 55vw);
-  height: auto;
-  margin-bottom: 32px;
-  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.4));
-}
-
-.hero-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #b0b2b6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-tagline .gold {
-  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dim) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-sub {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-}
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--gold);
-  color: var(--navy-deep);
-  padding: 16px 40px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.hero-cta:hover {
-  background: var(--gold-light);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(200, 168, 78, 0.3);
-}
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.scroll-chevron {
-  width: 24px;
-  height: 24px;
-  border-right: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
-  transform: rotate(45deg);
-  animation: scrollBounce 2s ease-in-out infinite;
-}
-@keyframes scrollBounce {
-  0%, 100% { transform: rotate(45deg) translate(0,0); }
-  50% { transform: rotate(45deg) translate(6px,6px); }
-}
-
-/* ============================================
-   SECTION BASE
-   ============================================ */
-section {
-  position: relative;
-  padding: 120px 0;
-}
-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, transparent, var(--gold-dim), transparent);
-  opacity: 0.3;
-}
-
-/* ============================================
-   SNAPSHOT — Bento Grid
-   ============================================ */
-.snapshot-section { padding-top: 80px; }
-.bento-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-@media (min-width: 640px) { .bento-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .bento-grid { grid-template-columns: repeat(4, 1fr); } }
-.bento-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 32px 24px;
-  backdrop-filter: blur(10px);
-  transition: all var(--transition);
-}
-.bento-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold-dim);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(200,168,78,0.15);
-}
-.bento-card.featured {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--navy-surface), var(--navy-light));
-  border-color: var(--gold-dim);
-}
-@media (min-width: 1024px) { .bento-card.featured { grid-column: span 2; } }
-.bento-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-  color: var(--gold);
-}
-.bento-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-.bento-card p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-.bento-value {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--gold);
-  font-family: var(--font-display);
-  margin-bottom: 4px;
-}
-
-/* ============================================
-   ABOUT — Parallax Split
-   ============================================ */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-  align-items: center;
-}
-@media (min-width: 1024px) { .about-grid { grid-template-columns: 1fr 1fr; } }
-.about-text p {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
-  line-height: 1.8;
-}
-.about-image {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--navy-surface), var(--navy-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--card-border);
-}
-.about-image-inner {
-  text-align: center;
-  padding: 40px;
-}
-.about-image-inner .icon {
-  font-size: 4rem;
-  margin-bottom: 16px;
-  color: var(--gold);
-}
-.about-image-inner h3 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--gold);
-}
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-}
-.stat-item {
-  text-align: center;
-  padding: 20px 12px;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--card-border);
-}
-.stat-number {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--gold);
-  display: block;
-}
-.stat-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 4px;
-}
-
-/* ============================================
-   VISION & MISSION — Floating Cards
-   ============================================ */
-.vm-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-@media (min-width: 768px) { .vm-grid { grid-template-columns: 1fr 1fr; } }
-.vm-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  backdrop-filter: blur(10px);
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.vm-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-.vm-card:hover::before { opacity: 1; }
-.vm-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-dim);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(200,168,78,0.05);
-}
-.vm-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--gold);
-}
-.vm-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--gold);
-}
-.vm-card ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.vm-card ul li {
-  position: relative;
-  padding-left: 24px;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-.vm-card ul li::before {
-  content: '◆';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: var(--gold);
-  font-size: 0.5rem;
-}
-
-/* ============================================
-   PRODUCTS — Coal Grades
-   ============================================ */
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-@media (min-width: 640px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(5, 1fr); } }
-.product-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 32px 20px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.product-card.featured {
-  border-color: var(--gold-dim);
-  background: linear-gradient(180deg, rgba(200,168,78,0.08), var(--card-bg));
-}
-.product-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
-}
-.product-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: var(--gold);
-  color: var(--navy-deep);
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.product-grade {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--gold);
-  margin: 16px 0 8px;
-}
-.product-grade small {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  display: block;
-}
-.product-specs {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 16px;
-}
-.product-specs li {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  padding: 4px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-.product-specs li:last-child { border: none; }
-
-/* ============================================
-   OPERATIONS — Timeline
-   ============================================ */
-.timeline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--gold-dim), var(--gold), var(--gold-dim), transparent);
-}
-@media (min-width: 768px) {
-  .timeline::before { left: 50%; transform: translateX(-50%); }
-}
-.timeline-item {
-  position: relative;
-  padding-left: 56px;
-  padding-bottom: 48px;
-}
-@media (min-width: 768px) {
-  .timeline-item { width: 50%; padding-left: 0; }
-  .timeline-item:nth-child(odd) { padding-right: 56px; text-align: right; margin-right: 50%; }
-  .timeline-item:nth-child(even) { padding-left: 56px; margin-left: 50%; }
-}
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-dot {
-  position: absolute;
-  left: 12px;
-  top: 4px;
-  width: 18px;
-  height: 18px;
-  background: var(--navy-deep);
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  z-index: 2;
-  transition: all 0.3s;
-}
-.timeline-item:hover .timeline-dot { background: var(--gold); box-shadow: 0 0 20px rgba(200,168,78,0.4); }
-@media (min-width: 768px) {
-  .timeline-dot { left: auto; }
-  .timeline-item:nth-child(odd) .timeline-dot { right: -9px; }
-  .timeline-item:nth-child(even) .timeline-dot { left: -9px; }
-}
-.timeline-content {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 24px;
-  backdrop-filter: blur(10px);
-  transition: all var(--transition);
-}
-.timeline-content:hover {
-  border-color: var(--gold-dim);
-  transform: translateY(-2px);
-}
-.timeline-step {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--gold);
-  margin-bottom: 8px;
-}
-.timeline-content h3 {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.timeline-content p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ============================================
-   WHY US — 4 Pillars
-   ============================================ */
-.pillars-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-@media (min-width: 640px) { .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .pillars-grid { grid-template-columns: repeat(4, 1fr); } }
-.pillar-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.pillar-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  border: 1px solid transparent;
-  transition: all 0.4s;
-}
-.pillar-card:hover::after {
-  border-color: var(--gold);
-  box-shadow: inset 0 0 30px rgba(200,168,78,0.06);
-}
-.pillar-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-}
-.pillar-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-}
-.pillar-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.pillar-card p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ============================================
-   CONTACT — Glassmorphism Card + Form
-   ============================================ */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-@media (min-width: 1024px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
-.contact-form-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-}
-.contact-form-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.contact-form-card .sub {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 32px;
-}
-.form-group {
-  margin-bottom: 20px;
-}
-.form-group label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: rgba(10, 22, 40, 0.6);
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
-  padding: 14px 16px;
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  transition: all 0.3s;
-  outline: none;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(200,168,78,0.1);
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--text-muted); }
-.form-group textarea { min-height: 120px; resize: vertical; }
-.form-submit {
-  width: 100%;
-  background: var(--gold);
-  color: var(--navy-deep);
-  padding: 16px 32px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-family: var(--font-body);
-}
-.form-submit:hover {
-  background: var(--gold-light);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(200,168,78,0.25);
-}
-.form-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 40px 20px;
-}
-.form-success.show { display: block; }
-.form-success .icon { font-size: 3rem; color: var(--gold); margin-bottom: 16px; }
-.form-success h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold); margin-bottom: 8px; }
-.form-success p { color: var(--text-muted); font-size: 0.9rem; }
-.form-error {
-  color: #e74c3c;
-  font-size: 0.8rem;
-  margin-top: 6px;
-  display: none;
-}
-.form-error.visible { display: block; }
-
-/* Contact Info */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  justify-content: center;
-}
-.contact-info-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.contact-icon {
-  font-size: 1.5rem;
-  color: var(--gold);
-  flex-shrink: 0;
-}
-.contact-info-item h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
-.contact-info-item p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.footer {
-  background: rgba(10, 22, 40, 0.8);
-  border-top: 1px solid var(--glass-border);
-  padding: 60px 0 40px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-@media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-.footer-brand h3 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.footer-brand p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-.footer-col h4 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
-  margin-bottom: 16px;
-}
-.footer-col ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.footer-col ul li a {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: color 0.3s;
-}
-.footer-col ul li a:hover { color: var(--gold); }
-.footer-bottom {
-  border-top: 1px solid var(--glass-border);
-  padding-top: 24px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* ============================================
-   ANIMATION UTILITY
-   ============================================ */
-.reveal-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-}
-.parallax-layer {
-  will-change: transform;
-}
-
-/* ============================================
-   LOADING SCREEN
-   ============================================ */
-.loading-screen {
-  position: fixed;
-  inset: 0;
-  background: var(--navy-deep);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-.loading-screen.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-.loading-logo {
-  animation: logoPulse 1.2s ease-in-out infinite;
-}
-@keyframes logoPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(0.96); }
-}
+:root{--navy-900:#0a0e17;--navy-800:#0f1a2e;--navy-700:#1e2d4d;--navy-600:#2a3f66;--gold-400:#c8a84e;--gold-300:#d4b86a;--gold-200:#e5c76b;--blue-400:#4a9eff;--blue-300:#6bb5ff;--steel-400:#3a5a8a;--steel-300:#5a7aaa;--text-primary:#e8e6e3;--text-secondary:#9a9a9a;--glass-bg:rgba(15,26,46,0.6);--glass-border:rgba(200,168,78,0.15);--card-bg:rgba(15,26,46,0.55);--card-border:rgba(200,168,78,0.12);--card-hover:rgba(30,45,77,0.7);--radius:16px;--radius-lg:24px;--transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);--font-sans:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;--navbar-height:72px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--gold-400) var(--navy-900)}
+body{font-family:var(--font-sans);background:var(--navy-900);color:var(--text-primary);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.loading-screen{position:fixed;inset:0;z-index:10000;background:var(--navy-900);display:flex;align-items:center;justify-content:center;transition:opacity 0.5s ease,visibility 0.5s ease}
+.loading-screen.hidden{opacity:0;visibility:hidden}
+.loading-logo{width:min(180px,40vw);height:auto;animation:logoPulse 1.2s ease-in-out infinite}
+@keyframes logoPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.7;transform:scale(0.96)}}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--navbar-height);display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:transparent;transition:background 0.4s ease,box-shadow 0.4s ease}
+.navbar.scrolled{background:rgba(10,14,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(200,168,78,0.08)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{height:64px;width:auto;animation:logoSpin 6s linear infinite}
+@keyframes logoSpin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+.nav-logo-text{font-size:0.85rem;font-weight:600;color:var(--text-primary);letter-spacing:0.03em}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.3s ease;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold-400);transition:width 0.3s ease}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text-primary);border-radius:1px;transition:all 0.3s ease}
+section{position:relative;padding:100px 40px;overflow:hidden}
+.section-label{font-size:0.75rem;font-weight:700;letter-spacing:0.15em;color:var(--gold-400);text-transform:uppercase;margin-bottom:12px}
+.section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:16px;color:var(--text-primary);letter-spacing:-0.02em}
+.section-subtitle{font-size:clamp(1rem,2vw,1.25rem);color:var(--text-secondary);font-weight:400;margin-bottom:48px;max-width:650px}
+.container{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+#hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--navbar-height) + 100px) 40px 40px;background:url('assets/images/hero-barge.jpg') center/cover no-repeat;background-attachment:fixed}
+#hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,14,23,0.9) 0%,rgba(15,26,46,0.75) 50%,rgba(10,14,23,0.85) 100%);z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;width:100%;max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.hero-logo{display:block;width:min(220px,45vw);height:auto;margin-bottom:-12px;margin-left:clamp(5rem,13vw,7.5rem);filter:drop-shadow(0 8px 30px rgba(0,0,0,0.4))}
+.hero-company{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;line-height:1.1;margin-bottom:8px}
+.hero-tagline{font-size:clamp(1rem,2.2vw,1.4rem);color:var(--gold-400);font-weight:600;margin-bottom:20px}
+.hero-desc{font-size:clamp(0.85rem,1.5vw,1rem);color:var(--text-secondary);margin-bottom:36px;line-height:1.8;max-width:520px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary,.btn-outline{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:12px;font-weight:600;font-size:.8rem;text-decoration:none;cursor:pointer;transition:all 0.3s ease;border:none;font-family:var(--font-sans)}
+.btn-primary{background:var(--gold-400);color:var(--navy-900)}
+.btn-primary:hover{background:var(--gold-300);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,168,78,0.3)}
+.btn-outline{background:transparent;border:2px solid var(--gold-400);color:var(--gold-400)}
+.btn-outline:hover{background:var(--gold-400);color:var(--navy-900)}
+.hero-inquiry{background:rgba(15,26,46,0.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:9px 10px;max-width:360px;margin-left:auto;opacity:0.8;margin-top:60px}
+.hero-inquiry h3{font-size:0.85rem;font-weight:700;margin:0;line-height:1.2}
+.hero-inquiry p{font-size:0.7rem;color:var(--text-secondary);margin:0 0 8px 0;line-height:1.2}
+.hero-inquiry .form-group{margin-bottom:8px}
+.hero-inquiry label{display:block;font-size:10px;font-weight:600;color:var(--text-secondary);margin-bottom:2px;text-transform:uppercase;letter-spacing:0.05em;transform:scale(0.8);transform-origin:left center}
+.hero-inquiry input,.hero-inquiry select{padding:3px 6px;font-size:10px;width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text-primary);outline:none;transition:border-color 0.3s ease;font-family:var(--font-sans);transform:scale(1);transform-origin:left center}
+.hero-inquiry input:focus,.hero-inquiry select:focus{border-color:var(--gold-400)}
+.hero-inquiry input::placeholder{font-size:0.6rem;color:var(--text-secondary);opacity:0.6}
+.hero-inquiry select option{background:var(--navy-800);color:var(--text-primary)}
+.hero-inquiry .btn-primary{width:100%;justify-content:center;margin-top:4px;padding:6px 12px;font-size:0.6rem}
+#problem{text-align:center;background:var(--navy-800)}
+#problem .container{max-width:800px}
+.problem-text{font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--text-secondary);line-height:1.8}
+.problem-text strong{color:var(--gold-400)}
+.problem-principle{margin-top:40px;padding:28px 40px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);display:inline-block;font-size:clamp(0.95rem,1.8vw,1.15rem);color:var(--gold-400);font-weight:600}
+#matrix{background:var(--navy-900)}
+.matrix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.matrix-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:36px 28px;text-align:center;position:relative;overflow:hidden;transition:all var(--transition);cursor:default}
+.matrix-card:hover{transform:translateY(-8px);border-color:var(--gold-400);box-shadow:0 20px 50px rgba(0,0,0,0.4),0 0 30px rgba(200,168,78,0.1)}
+.matrix-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold-400);opacity:0;transition:opacity var(--transition)}
+.matrix-card:hover::before{opacity:1}
+.matrix-icon{font-size:2.2rem;margin-bottom:16px;display:block}
+.matrix-card h3{font-size:1.15rem;font-weight:700;margin-bottom:12px;color:var(--gold-400)}
+.matrix-card p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7}
+#coordinates{background:var(--navy-800)}
+.coord-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.coord-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:32px;transition:border-color 0.3s ease}
+.coord-card:hover{border-color:var(--gold-400)}
+.coord-card h3{font-size:1rem;color:var(--gold-400);margin-bottom:16px;font-weight:700}
+.coord-card p,.coord-card li{font-size:0.9rem;color:var(--text-secondary);line-height:1.8}
+.coord-card ul{padding-left:20px}
+.coord-card li{margin-bottom:6px}
+.coord-card ol{padding-left:20px}
+.vision-mission{margin-top:60px}
+.vm-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;margin-top:32px}
+.vm-box{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:36px}
+.vm-box h3{color:var(--gold-400);font-size:1.1rem;margin-bottom:16px}
+.vm-box p{color:var(--text-primary);font-size:1.05rem;line-height:1.8}
+.vm-box ol{color:var(--text-secondary);padding-left:20px}
+.vm-box ol li{margin-bottom:8px;font-size:0.95rem;line-height:1.7}
+#corridor{background:var(--navy-900)}
+.corridor-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start}
+.corridor-map{text-align:center}
+.corridor-map img{max-width:800px;width:100%;height:auto;filter:drop-shadow(0 0 30px rgba(200,168,78,0.15))}
+.corridor-info h3{font-size:1.3rem;color:var(--gold-400);margin-bottom:20px}
+.corridor-info p{font-size:0.95rem;color:var(--text-secondary);margin-bottom:16px;line-height:1.8}
+.corridor-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.corridor-stat{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:20px;text-align:center}
+.corridor-stat .stat-value{font-size:1.5rem;font-weight:800;color:var(--gold-400);margin-bottom:4px}
+.corridor-stat .stat-label{font-size:0.8rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em}
+#coal-checker{background:url('assets/images/coal-river.jpg') center/cover no-repeat;background-attachment:fixed}
+#coal-checker::before{content:'';position:absolute;inset:0;background:rgba(10,14,23,0.88);z-index:1}
+.coal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.coal-card{background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px 24px;text-align:center;transition:all 0.3s ease;cursor:pointer}
+.coal-card:hover{transform:translateY(-6px);border-color:var(--gold-400);box-shadow:0 16px 40px rgba(0,0,0,0.5)}
+.coal-card.highlight{border-color:var(--gold-400);box-shadow:0 0 30px rgba(200,168,78,0.2)}
+.coal-grade{font-size:1.6rem;font-weight:800;color:var(--gold-400);margin-bottom:4px}
+.coal-benchmark{font-size:0.8rem;color:var(--text-secondary);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.08em}
+.coal-specs{display:flex;justify-content:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.coal-spec{text-align:center}
+.coal-spec .spec-label{font-size:0.7rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em}
+.coal-spec .spec-value{font-size:0.95rem;font-weight:700;color:var(--text-primary)}
+.coal-card .btn-outline{font-size:0.8rem;padding:10px 24px;border-radius:8px}
+.coal-note{text-align:center;margin-top:36px;font-size:0.85rem;color:var(--text-secondary);font-style:italic}
+#journey{background:var(--navy-800);padding:100px 0}
+#journey .container{padding:0 40px}
+#journey .section-label,#journey .section-title,#journey .section-subtitle{padding:0 40px}
+.journey-track{display:flex;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:32px 0 20px;margin:32px 0 0}
+.journey-track::-webkit-scrollbar{display:none}
+.journey-step{flex:0 0 auto;width:320px;min-height:280px;scroll-snap-align:start;margin-right:24px;position:relative}
+.journey-step:first-child{margin-left:40px}
+.journey-step:last-child{margin-right:40px}
+.journey-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:32px;height:100%;transition:all 0.3s ease;position:relative}
+.journey-card.active{border-color:var(--gold-400);box-shadow:0 12px 40px rgba(200,168,78,0.15)}
+.journey-num{font-size:3rem;font-weight:800;color:var(--gold-400);opacity:0.3;margin-bottom:16px;line-height:1}
+.journey-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--text-primary)}
+.journey-card p{font-size:0.85rem;color:var(--text-secondary);line-height:1.7}
+.journey-nav{display:flex;justify-content:center;gap:12px;margin-top:24px;padding:0 40px}
+.journey-nav button{width:44px;height:44px;border-radius:50%;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-primary);font-size:1.1rem;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center}
+.journey-nav button:hover{border-color:var(--gold-400);color:var(--gold-400)}
+#docs{background:url('assets/images/vessel-port.jpg') center/cover no-repeat;background-attachment:fixed}
+#docs::before{content:'';position:absolute;inset:0;background:rgba(10,14,23,0.88);z-index:1}
+.docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+.docs-col h3{font-size:1.2rem;color:var(--gold-400);margin-bottom:20px;font-weight:700}
+.docs-card{background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px}
+.docs-card ul{list-style:none;padding:0}
+.docs-card li{padding:10px 0;border-bottom:1px solid var(--glass-border);font-size:0.9rem;color:var(--text-secondary);display:flex;align-items:center;gap:12px}
+.docs-card li:last-child{border-bottom:none}
+.docs-card .check-icon{color:var(--gold-400);font-weight:700}
+.docs-note{margin-top:36px;text-align:center;font-size:0.9rem;color:var(--text-secondary)}
+#form{background:var(--navy-800)}
+.form-wrapper{max-width:780px;margin:48px auto 0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:48px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group.full{grid-column:1 / -1}
+.form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:10px;color:var(--text-primary);font-size:0.9rem;font-family:var(--font-sans);transition:border-color 0.3s ease}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold-400)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-wrapper .btn-primary{width:100%;justify-content:center;margin-top:24px;padding:16px}
+.form-success{display:none;text-align:center;padding:32px;background:var(--glass-bg);border:1px solid var(--gold-400);border-radius:var(--radius);margin-top:16px}
+.form-success.show{display:block}
+.form-success h3{color:var(--gold-400);margin-bottom:8px}
+#contact{background:var(--navy-900)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+.contact-item{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--glass-border)}
+.contact-item:last-child{border-bottom:none}
+.contact-icon{font-size:1.3rem;min-width:24px;text-align:center}
+.contact-item .label{font-size:0.8rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.contact-item .value{font-size:0.95rem;color:var(--text-primary)}
+.contact-snapshot{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:36px}
+.contact-snapshot h3{font-size:1.1rem;margin-bottom:24px;color:var(--gold-400)}
+.contact-snapshot table{width:100%;border-collapse:collapse}
+.contact-snapshot td{padding:10px 0;font-size:0.85rem}
+.contact-snapshot td:first-child{color:var(--text-secondary);font-weight:600;width:40%;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;vertical-align:top;padding-right:12px}
+.contact-snapshot td:last-child{color:var(--text-primary);border-bottom:1px solid var(--glass-border)}
+.contact-snapshot tr:last-child td{border-bottom:none}
+.closing-block{margin-top:48px;padding:36px 48px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-lg);text-align:center}
+.closing-block p{font-size:1.05rem;color:var(--text-secondary);line-height:1.9;max-width:800px;margin:0 auto}
+.why-us-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.why-us-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:24px;display:flex;align-items:flex-start;gap:16px}
+.why-us-item .check-icon{color:var(--gold-400);font-size:1.2rem;margin-top:2px}
+.why-us-item .why-text{font-size:0.9rem;color:var(--text-secondary);line-height:1.7}
+footer{text-align:center;padding:48px 40px;border-top:1px solid var(--glass-border);color:var(--text-secondary);font-size:0.8rem}
+footer .tagline{color:var(--gold-400);font-size:0.85rem;margin-top:8px}
+.floating-cards{position:fixed;bottom:10px;right:24px;z-index:999;display:flex;flex-direction:column;gap:0}
+.float-card{background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:var(--radius);width:100px;padding:4px 8px;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);position:relative;margin-bottom:-12px;opacity:0.8}
+.float-card:last-child{margin-bottom:0}
+.float-card.focused{margin-bottom:0;border-color:var(--gold-400);box-shadow:0 8px 30px rgba(200,168,78,0.2);z-index:10}
+.float-card.expanded{width:100px;padding:4px 8px;margin-bottom:12px}
+.float-header{display:flex;align-items:center;gap:8px}
+.float-icon{font-size:0.9rem}
+.float-title{font-size:0.65rem;font-weight:700;color:var(--gold-400)}
+.float-body,.float-cta{overflow:hidden;max-height:0;opacity:0;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1),opacity 0.5s cubic-bezier(0.4,0,0.2,1)}
+.float-body{margin-top:8px;font-size:0.6rem;color:var(--text-secondary);line-height:1.4}
+.float-card:hover .float-body,.float-card.expanded .float-body{max-height:120px;opacity:1}
+.float-card .float-cta{display:block;margin-top:8px;font-size:0.6rem;color:var(--gold-400);font-weight:600}
+.float-card:hover .float-cta,.float-card.expanded .float-cta{max-height:50px;opacity:1}
+@media(max-width:1024px){.matrix-grid,.coal-grid{grid-template-columns:repeat(2,1fr)}.coord-grid{grid-template-columns:1fr}.vm-grid{grid-template-columns:1fr}.corridor-grid{grid-template-columns:1fr}.docs-grid{grid-template-columns:1fr}.journey-step{width:280px}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--navbar-height);left:0;right:0;background:rgba(10,14,23,0.96);backdrop-filter:blur(16px);padding:24px 40px;gap:20px;border-bottom:1px solid var(--glass-border)}section{padding:80px 24px}.hero-grid{grid-template-columns:1fr;gap:40px}#hero,#coal-checker,#docs{background-attachment:scroll}.matrix-grid,.coal-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-wrapper{padding:28px}.contact-grid{grid-template-columns:1fr}.why-us-grid{grid-template-columns:1fr}.journey-step{width:260px}.floating-cards{bottom:40px;right:16px}.float-card{width:100px}.float-card.expanded{width:100px}.corridor-stats{grid-template-columns:1fr}}
+@media(max-width:480px){section{padding:60px 16px}.hero{padding:calc(var(--navbar-height) + 20px) 16px 40px}.hero-actions{flex-direction:column}.btn-primary,.btn-outline{width:100%;justify-content:center}.problem-principle{padding:20px 24px}.journey-step{width:240px}#journey .container{padding:0 16px}#journey .section-label,#journey .section-title,#journey .section-subtitle{padding:0 16px}.journey-step:first-child{margin-left:16px}.journey-step:last-child{margin-right:16px}.contact-snapshot{padding:24px}.closing-block{padding:24px}}
 </style>
 </head>
 <body>
 
-<!-- LOADING SCREEN -->
-<div class="loading-screen" id="loadingScreen">
-  <div class="loading-logo" style="font-family:var(--font-display);font-size:2rem;color:var(--gold);font-weight:700;">SIP</div>
-</div>
-
-<!-- NAVBAR -->
+<div class="loading-screen" id="loadingScreen"><img src="assets/images/BRAND%20LOGO%20PT%20SIP.png" alt="PT. Sinergi Investama Prakasa" class="loading-logo"></div>
 <nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="nav-logo">
-      <img src="assets/images/Logo%20PT.%20SIP.png" alt="PT. SIP Logo" style="height:64px;width:auto;">
-    </a>
-    <ul class="nav-links">
-      <li><a href="#snapshot">Snapshot</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#operations">Operations</a></li>
-      <li><a href="#why-us">Why Us</a></li>
-      <li><a href="#contact" class="nav-cta">Hubungi Kami</a></li>
-    </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<a href="#hero" class="nav-logo"><img src="assets/images/BRAND%20LOGO%20PT%20SIP.png" alt="SIP"></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#problem">About</a></li><li><a href="#matrix">Matrix</a></li><li><a href="#coal-checker">Coal</a></li><li><a href="#journey">Journey</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#snapshot">Snapshot</a>
-  <a href="#about">About</a>
-  <a href="#vision-mission">Visi & Misi</a>
-  <a href="#products">Products</a>
-  <a href="#operations">Operations</a>
-  <a href="#why-us">Why Us</a>
-  <a href="#contact" style="color:var(--gold);font-weight:600;">Hubungi Kami</a>
+<section id="hero">
+<div class="hero-grid">
+<div class="hero-left">
+<img src="assets/images/Logo%20PT.%20SIP.png" alt="PT. Sinergi Investama Prakasa" class="hero-logo">
+<h2 class="hero-company" style="color:var(--text-primary);font-size:clamp(1.3rem,3.2vw,2.2rem)">PT. Sinergi Investama Prakasa</h2>
+<p class="hero-tagline">Coal Trading &amp; Risk-Managed Supply Chain Partner</p>
+<p class="hero-desc">Jakarta-based coal trading house, connecting buyer requirements with Kalimantan supply through structured, documented, risk-controlled execution.</p>
+<div class="hero-actions"><a href="#contact" class="btn-primary">Contact Us</a><a href="#form" class="btn-outline">Submit Requirement</a></div>
+</div>
+<div class="hero-inquiry"><h3>Mini Cargo Inquiry</h3><p>Quick check — availability &amp; pricing estimate</p>
+<div class="form-group"><label>Coal Grade (GAR)</label><input list="gar-list-hero" placeholder="e.g. 5,000" id="miniGar"><datalist id="gar-list-hero"><option value="3,400"><option value="4,200"><option value="4,500"><option value="5,000"><option value="5,500"><option value="5,800"><option value="5,900"><option value="6,322"><option value="6,500"></datalist></div>
+<div class="form-group"><label>Quantity (MT/month)</label><input type="text" placeholder="e.g. 30,000" id="miniQty" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g,',')"></div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="your@company.com" id="miniEmail"></div>
+<button class="btn-primary" id="miniCheck">Check Availability &rarr;</button></div>
+</div>
+</section>
+
+<section id="problem">
+<div class="container">
+<div class="section-label">The Challenge</div>
+<h2 class="section-title">Coal Trading Has Inherent Risk</h2>
+<p class="problem-text">Setiap transaksi batubara memiliki risiko pada <strong>kualitas</strong>, <strong>kuantitas</strong>, <strong>timeline</strong>, dan <strong>settlement</strong>. Kami membangun proses yang dirancang untuk mengurangi risiko tersebut melalui koordinasi yang disiplin dan dokumentasi yang konsisten.</p>
+<div class="problem-principle">Prinsip eksekusi: One cargo, one plan, one time control.</div>
+</div>
+</section>
+
+<section id="matrix">
+<div class="container">
+<div class="section-label">Cargo Control</div>
+<h2 class="section-title">Risk-Managed Execution</h2>
+<p class="section-subtitle">Quality &middot; Quantity &middot; Timeline &middot; Settlement — the four pillars of disciplined coal trading.</p>
+<div class="matrix-grid">
+<div class="matrix-card"><span class="matrix-icon">&#9670;</span><h3>Quality</h3><p>Koordinasi sampling, sealing, inspection, dan verifikasi COA untuk memastikan spesifikasi kargo sesuai kebutuhan buyer.</p></div>
+<div class="matrix-card"><span class="matrix-icon">&#9633;</span><h3>Quantity</h3><p>Koordinasi draft survey, toleransi kuantitas, dan rekonsiliasi loading untuk meminimalkan potensi dispute.</p></div>
+<div class="matrix-card"><span class="matrix-icon">&#9200;</span><h3>Timeline</h3><p>Penyelarasan kesiapan stockpile, jetty, laycan, loading plan, dan jadwal kapal agar eksekusi berjalan lebih terkontrol.</p></div>
+<div class="matrix-card"><span class="matrix-icon">&#9878;</span><h3>Settlement</h3><p>Penyusunan dokumen transaksi (invoice, B/L, COA, draft survey) agar proses pembayaran berjalan lancar sesuai terms kontrak.</p></div>
+</div>
+</div>
+</section>
+
+<section id="coordinates">
+<div class="container">
+<div class="section-label">Our Role</div>
+<h2 class="section-title">What PT. SIP Coordinates</h2>
+<p class="section-subtitle">We connect sourcing, stockpile and jetty readiness, loading coordination, survey management, and documentation into a single delivery plan — so every cargo project runs with clear control and measurable risk mitigation.</p>
+<div class="coord-grid">
+<div class="coord-card"><h3>About Us</h3><p>PT. Sinergi Investama Prakasa is a Jakarta-based coal trading house company. Our supply chain is centered in Kalimantan, built by an experienced operator network.</p></div>
+<div class="coord-card"><h3>What We Deliver</h3><p>Thermal multi-grade coal supply with competitive value, backed by risk-controlled execution.</p><ul style="margin-top:12px"><li>QC &amp; Survey Coordination — sampling, sealing, inspection, reporting</li><li>Operational Coordination — stockpile and jetty handling, barging, transshipment</li><li>FOB Documentation Package — documents ready for smooth settlement</li><li>Scalable Delivery Plan — aligned with vessel schedule, designed for repeat execution</li></ul></div>
+<div class="coord-card"><h3>Target Market</h3><p>Kami melayani klien industri domestik dan multilateral yang membutuhkan pasokan konsisten dengan settlement yang bersih dan transparan.</p><p style="margin-top:12px">Kami selektif dalam mendukung aliran trade — baik domestic maupun multilateral — yang menuntut reliability dan standar proses delivery dengan manajemen risiko yang terukur.</p></div>
+</div>
+<div class="vision-mission">
+<h2 class="section-title">Vision &amp; Mission</h2>
+<p class="section-subtitle">Risk-controlled execution from inquiry to settlement</p>
+<div class="vm-grid">
+<div class="vm-box"><h3>Vision</h3><p>Menjadi mitra trading Anda dalam membangun coal supply chain dengan menitikberatkan eksekusi berdasarkan risk-controlled yang terukur.</p></div>
+<div class="vm-box"><h3>Mission</h3><ol><li>Memetakan &amp; mengukur risiko di setiap transaksi (quality, quantity, timeline, settlement).</li><li>Menjalankan QC yang disiplin lewat sampling, sealing, dan koordinasi survey untuk mencegah dispute.</li><li>Mengunci delivery plan end-to-end untuk menjamin eksekusi yang telah disepakati.</li><li>Menyiapkan dokumen settlement-ready yang konsisten untuk mempercepat pembayaran.</li><li>Membangun jaringan supply &amp; logistik yang repeatable untuk memastikan kontinuitas.</li></ol></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="corridor">
+<div class="container">
+<div class="section-label">Sourcing</div>
+<h2 class="section-title">Kalimantan Sourcing Corridor</h2>
+<p class="section-subtitle">Kalsel, Kalteng, &amp; Kaltim — connecting mine, stockpile, jetty, and vessel.</p>
+<div class="corridor-grid">
+<div class="corridor-map"><img src="assets/svg/indonesia-network.svg?v=2" alt="Indonesia Sourcing Network" style="width:100%;height:auto"></div>
+<div class="corridor-info">
+<h3>Footprint &amp; Sourcing</h3>
+<p><strong>Primary Sourcing:</strong> Kalimantan Selatan, Kalimantan Tengah, &amp; Kalimantan Timur</p>
+<p><strong>Stockpile / Jetty:</strong> Kalsel (Banjar/Banjarmasin corridor) &middot; Kaltim</p>
+<p><strong>Execution Focus:</strong> FOB-ready aligned with buyer vessel schedule</p>
+<div class="corridor-stats">
+<div class="corridor-stat"><div class="stat-value">20K&ndash;50K</div><div class="stat-label">MT/month Planned</div></div>
+<div class="corridor-stat"><div class="stat-value">2</div><div class="stat-label">Province Corridors</div></div>
+<div class="corridor-stat"><div class="stat-value">Scalable</div><div class="stat-label">With Repeat Execution</div></div>
+<div class="corridor-stat"><div class="stat-value">FOB</div><div class="stat-label">Delivery Basis</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="coal-checker">
+<div class="container">
+<div class="section-label">Products</div>
+<h2 class="section-title">Multi-Grade Thermal Coal</h2>
+<p class="section-subtitle">Verified by independent surveyors — select a grade to check current availability.</p>
+<div class="coal-grid">
+<div class="coal-card" data-grade="3400"><div class="coal-grade">3,400</div><div class="coal-benchmark">Platts FOB Kalimantan</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">46%</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">4%</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">0.2%</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="5000"><div class="coal-grade">5,000</div><div class="coal-benchmark">Platts FOB Kalimantan</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">26%</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">8%</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">0.80%</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="5900"><div class="coal-grade">5,900</div><div class="coal-benchmark">Platts FOB Kalimantan</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">15%</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">8%</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">0.80%</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="6322"><div class="coal-grade">6,322</div><div class="coal-benchmark">HBA Reference</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">8%</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">15%</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">0.8%</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="3200-3400"><div class="coal-grade">3,200&ndash;3,400</div><div class="coal-benchmark">COA-Based</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">TBD</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="4000-4500"><div class="coal-grade">4,000&ndash;4,500</div><div class="coal-benchmark">COA-Based</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">TBD</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="5500-6600"><div class="coal-grade">5,500&ndash;6,600+</div><div class="coal-benchmark">COA-Based</div><div class="coal-specs"><div class="coal-spec"><div class="spec-label">TM</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Ash</div><div class="spec-value">TBD</div></div><div class="coal-spec"><div class="spec-label">Sulphur</div><div class="spec-value">TBD</div></div></div><button class="btn-outline">Check Availability</button></div>
+<div class="coal-card" data-grade="custom"><div class="coal-grade">Custom</div><div class="coal-benchmark">Tell Us Your Spec</div><div class="coal-specs"><p style="font-size:0.85rem;color:var(--text-secondary);padding:16px 0">Don't see your grade? Submit your requirement and we'll source it.</p></div><button class="btn-outline">Submit Requirement</button></div>
+</div>
+<p class="coal-note">Final specification confirmed via mine COA and finalized by independent surveyor at loading.</p>
+</div>
+</section>
+
+<section id="journey">
+<div class="container"><div class="section-label">Operational Flow</div><h2 class="section-title">From Inquiry to Settlement</h2><p class="section-subtitle">8-step horizontal journey — one cargo, one plan, one time control.</p></div>
+<div class="journey-track" id="journeyTrack">
+<div class="journey-step"><div class="journey-card active"><div class="journey-num">01</div><h3>Buyer Need</h3><p>Specification, quantity, laycan discussed. Deal &amp; contract terms agreed with minimum 20% downpayment.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">02</div><h3>Spec Review</h3><p>Grade alignment against COA. Sourcing match from Kalimantan corridor confirmed.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">03</div><h3>Sourcing</h3><p>Identify supply from Kalimantan corridor. Stockpile coordination and jetty readiness confirmed.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">04</div><h3>Cargo Plan</h3><p>Vessel / Laycan schedule alignment. Pre-QC: quality check before loading begins.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">05</div><h3>QC &amp; Survey</h3><p>Independent survey coordination. COA verification against contract specification.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">06</div><h3>Loading</h3><p>Coordinated loading execution. Draft survey and quantity reconciliation in real-time.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">07</div><h3>Docs</h3><p>FOB-ready document package: Invoice, B/L, COA, Draft Survey — consistent documentation prevents payment delays.</p></div></div>
+<div class="journey-step"><div class="journey-card"><div class="journey-num">08</div><h3>Settlement</h3><p>Payment per contract terms — LC at sight or TT against documents. Deal-to-cash complete.</p></div></div>
+</div>
+<div class="journey-nav"><button id="journeyPrev" aria-label="Scroll left">&larr;</button><button id="journeyNext" aria-label="Scroll right">&rarr;</button></div>
+</section>
+
+<section id="docs">
+<div class="container">
+<div class="section-label">FOB Terms</div>
+<h2 class="section-title">Documentation &amp; FOB-Ready</h2>
+<p class="section-subtitle">Clear split — seller obligations vs. buyer obligations under FOB delivery.</p>
+<div class="docs-grid">
+<div class="docs-col"><h3>Seller Responsibility</h3><div class="docs-card"><ul><li><span class="check-icon">&#10003;</span> Prepare cargo per specification and quantity</li><li><span class="check-icon">&#10003;</span> Port/stockpile readiness and loading execution</li><li><span class="check-icon">&#10003;</span> Export clearance and standard shipping documents</li></ul></div></div>
+<div class="docs-col"><h3>Buyer Responsibility</h3><div class="docs-card"><ul><li><span class="check-icon">&rarr;</span> Nominate vessel and pay ocean freight</li><li><span class="check-icon">&rarr;</span> Bear surveyor costs</li><li><span class="check-icon">&rarr;</span> Bear risk after FOB point</li><li><span class="check-icon">&rarr;</span> Arrange insurance</li><li><span class="check-icon">&rarr;</span> Import clearance at destination (multilateral)</li></ul></div></div>
+</div>
+<p class="docs-note">Key term: Consistency of Invoice&ndash;B/L&ndash;COA&ndash;Draft Survey prevents payment delays.</p>
+</div>
+</section>
+
+<section id="form">
+<div class="container">
+<div class="section-label">Get Started</div>
+<h2 class="section-title">Submit Coal Requirement</h2>
+<p class="section-subtitle">Tell us your specification. Our team will respond within 1&times;24 hours with availability and pricing.</p>
+<div class="form-wrapper" id="requirementForm">
+<form id="coalForm">
+<div class="form-grid">
+<div class="form-group"><label>Coal Grade (GAR)</label><input type="text" list="gar-list" placeholder="e.g. 5,000" id="formGar" required><datalist id="gar-list"><option value="3,400"><option value="4,200"><option value="4,500"><option value="5,000"><option value="5,500"><option value="5,800"><option value="5,900"><option value="6,322"><option value="6,500"><option value="Custom"></datalist></div>
+<div class="form-group"><label>Quantity (MT/month)</label><input type="text" list="qty-list" placeholder="e.g. 30,000" id="formQty" required><datalist id="qty-list"><option value="10,000"><option value="20,000"><option value="30,000"><option value="50,000"><option value="100,000"></datalist></div>
+<div class="form-group"><label>Delivery Term</label><input type="text" list="term-list" placeholder="e.g. FOB" id="formTerm" required><datalist id="term-list"><option value="FOB"><option value="CIF"><option value="CNF"><option value="DES"></datalist></div>
+<div class="form-group"><label>Destination</label><input type="text" placeholder="e.g. Nhava Sheva, India" id="formDest"></div>
+<div class="form-group"><label>Target Laycan</label><input type="month" id="formLaycan" required></div>
+<div class="form-group"><label>Payment Structure</label><input type="text" list="pay-list" placeholder="e.g. L/C at sight" id="formPayment"><datalist id="pay-list"><option value="L/C at sight"><option value="T/T"><option value="L/C + T/T"></datalist></div>
+<div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name" id="formName" required></div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="your@company.com" id="formEmail" required></div>
+<div class="form-group full"><label>Additional Notes</label><textarea placeholder="Any specific requirements, target price, or questions..." id="formNotes"></textarea></div>
+</div>
+<button type="submit" class="btn-primary">Submit Requirement &rarr;</button>
+</form>
+<div class="form-success" id="formSuccess"><h3>&#10003; Requirement Submitted</h3><p>Terima kasih. Tim kami akan menghubungi Anda dalam 1&times;24 jam.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-label">Get In Touch</div>
+<h2 class="section-title">Contact &amp; Company Details</h2>
+<p class="section-subtitle">Start a conversation — our team is ready to discuss your coal supply needs.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M10 12h4"/></svg></div><div><div class="label">Office</div><div class="value">Jl. Ampera Raya No. 4, Cilandak Timur,<br>Pasar Minggu, Jakarta Selatan 12560</div></div></div>
+<div class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="label">Phone</div><div class="value">0813 56562286</div></div></div>
+<div class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><div class="label">Email</div><div class="value">sinergiinvestamaprakasa@gmail.com</div></div></div>
+<div class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="label">Sourcing Corridor</div><div class="value">Kalimantan Selatan, Kalimantan Tengah, &amp; Kalimantan Timur</div></div></div>
+</div>
+<div class="contact-snapshot"><h3>Company Snapshot</h3><table>
+<tr><td>Company Name</td><td>PT. Sinergi Investama Prakasa</td></tr>
+<tr><td>Established</td><td>AHU-0088474.AH.01.01.TAHUN 2025</td></tr>
+<tr><td>NIB</td><td>1510250093486</td></tr>
+<tr><td>NPWP</td><td>1000 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 1529</td></tr>
+<tr><td>Sourcing Corridor</td><td>Kalimantan Selatan, Kalimantan Tengah, &amp; Kalimantan Timur</td></tr>
+<tr><td>Planned Capacity</td><td>20,000&ndash;50,000 MT/month (scalable)</td></tr>
+</table></div>
+</div>
+<h2 class="section-title" style="margin-top:64px">Why Us</h2>
+<p class="section-subtitle">Built for repeat execution — perform first, scale later.</p>
+<div class="why-us-grid">
+<div class="why-us-item"><div class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="why-text"><strong>Risk-managed shipments</strong> — minimal surprises during loading, clear settlement</div></div>
+<div class="why-us-item"><div class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 3v18"/></svg></div><div class="why-text"><strong>Single delivery plan</strong> — QC + operations + documents coordinated end-to-end</div></div>
+<div class="why-us-item"><div class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div><div class="why-text"><strong>Built for repeat order</strong> — perform first, scale later</div></div>
+<div class="why-us-item"><div class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="why-text"><strong>Supply chain network</strong> — one of the largest in Asia</div></div>
+</div>
+<div class="closing-block"><p>PT. Sinergi Investama Prakasa didukung oleh jaringan operasional yang berpengalaman serta disiplin kerja yang berfokus pada pengelolaan risiko yang terukur. Kami siap menjadi mitra trading batubara yang Anda percaya, dengan eksekusi yang konsisten, spesifikasi yang jelas, mengedepankan keterbukaan, dan settlement process yang cepat sehingga setiap transaksi dapat dijalankan dan dipertanggungjawabkan dengan standar profesional yang tinggi.</p></div>
+</div>
+<footer><p>&copy; 2025 PT. Sinergi Investama Prakasa. All rights reserved.</p><p class="tagline">Built by Rexo.ID — "Build something nobody can take from you."</p></footer>
+</section>
+
+<div class="floating-cards" id="floatingCards">
+<div class="float-card" data-card="gar" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M3 3v18h18"/><path d="m7 16 4-8 4 4 4-6"/></svg><span class="float-title">GAR Guide</span></div><div class="float-body"><p>Coal grades from 3,400 to 6,500+ GAR. Benchmark vs COA-based. Our team helps you match the right grade to your boiler spec.</p></div><div class="float-cta">Explore Grades &rarr;</div></div>
+<div class="float-card" data-card="quantity" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 9h18M9 3v18"/></svg><span class="float-title">Quantity</span></div><div class="float-body"><p>20,000&ndash;50,000 MT/month planned capacity — scalable with repeat execution. Draft survey reconciliation at loading ensures accuracy.</p></div><div class="float-cta">Submit Requirement &rarr;</div></div>
+<div class="float-card" data-card="laycan" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="float-title">Laycan</span></div><div class="float-body"><p>Vessel schedule aligned with stockpile readiness. We coordinate jetty slots, barging, and transshipment to meet your laycan window.</p></div><div class="float-cta">Check Timeline &rarr;</div></div>
+<div class="float-card" data-card="docs" tabindex="0"><div class="float-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span class="float-title">Docs</span></div><div class="float-body"><p>FOB-ready package: Invoice, B/L, COA, Draft Survey. Consistent documentation = smooth settlement. LC or TT against documents.</p></div><div class="float-cta">View FOB Terms &rarr;</div></div>
 </div>
 
-<!-- ============================================
-     HERO
-     ============================================ -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <canvas class="hero-particles" id="heroParticles"></canvas>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <img src="assets/images/BRAND%20LOGO%20PT%20SIP.png" alt="PT. Sinergi Investama Prakasa" class="hero-logo">
-    <h1 class="hero-tagline">
-      Energi <span class="gold">Indonesia</span>,<br>Menggerakkan Dunia
-    </h1>
-    <p class="hero-sub">
-      PT. Sinergi Investama Prakasa — coal trading & supply chain solutions dengan jaringan tambang di Kalimantan, menghubungkan batubara premium Indonesia ke pasar global.
-    </p>
-    <a href="#contact" class="hero-cta">Hubungi Kami →</a>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-chevron"></div>
-  </div>
-</section>
-
-<!-- ============================================
-     SNAPSHOT — Company At A Glance
-     ============================================ -->
-<section class="snapshot-section" id="snapshot">
-  <div class="container">
-    <div class="section-label reveal-hidden">Company Snapshot</div>
-    <h2 class="section-title reveal-hidden">SIP <span class="gold">at a Glance</span></h2>
-    <p class="section-subtitle reveal-hidden">Legal, operational, dan kapabilitas PT. Sinergi Investama Prakasa dalam satu pandangan.</p>
-
-    <div class="bento-grid">
-      <div class="bento-card featured reveal-hidden">
-        <div class="bento-icon">🏢</div>
-        <h3>PT. Sinergi Investama Prakasa</h3>
-        <p>Perusahaan perdagangan batubara Indonesia yang berkomitmen pada transparansi, kualitas, dan keandalan dalam setiap transaksi. Berbasis di Jakarta dengan jaringan operasional di Kalimantan.</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">📋</div>
-        <h3>Akta Pendirian</h3>
-        <p>No. 10 — 30 September 2024<br>Notaris: Drs. Suwarno, S.H.</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">🏛️</div>
-        <h3>AHU & NIB</h3>
-        <p>AHU-AH.01.03-0205471<br>NIB: 1010240011222</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">💰</div>
-        <h3>Modal Dasar</h3>
-        <div class="bento-value">Rp 10 M</div>
-        <p>Modal Ditempatkan: Rp 2.5 M</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">📍</div>
-        <h3>Lokasi</h3>
-        <p>Jalan Cipinang Cempedak 3 No. 7A<br>RT 003 / RW 003, Jatinegara<br>Jakarta Timur 13340</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">⚡</div>
-        <h3>Bidang Usaha</h3>
-        <p>Perdagangan Besar<br>Batubara & Lignit<br>(KBLI 46610)</p>
-      </div>
-
-      <div class="bento-card reveal-hidden">
-        <div class="bento-icon">🌐</div>
-        <h3>Jangkauan</h3>
-        <div class="bento-value">Domestik</div>
-        <p>PLTU · Industri · Export-ready</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     ABOUT US — Parallax Split
-     ============================================ -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <div class="section-label reveal-hidden">About Us</div>
-        <h2 class="section-title reveal-hidden">Mitra Strategis <span class="gold">Batubara</span> Anda</h2>
-        <p class="reveal-hidden">PT. Sinergi Investama Prakasa berdiri dengan visi menjadi jembatan antara kekayaan tambang Indonesia dan kebutuhan energi global. Kami mengelola rantai pasok batubara dari hulu ke hilir — mulai dari pemilihan mitra tambang di Kalimantan hingga pengiriman tepat waktu ke buyer domestik maupun pasar ekspor.</p>
-        <p class="reveal-hidden">Didukung oleh jaringan supplier terpercaya dan tim profesional dengan pengalaman puluhan tahun di industri batubara, kami memastikan setiap transaksi berjalan transparan, sesuai spesifikasi, dan tepat waktu.</p>
-
-        <div class="about-stats">
-          <div class="stat-item reveal-hidden">
-            <span class="stat-number" data-count="15">0</span>
-            <span class="stat-label">Mitra Tambang</span>
-          </div>
-          <div class="stat-item reveal-hidden">
-            <span class="stat-number" data-count="500">0</span>
-            <span class="stat-label">K MT/Bulan Kapasitas</span>
-          </div>
-          <div class="stat-item reveal-hidden">
-            <span class="stat-number" data-count="10">0</span>
-            <span class="stat-label">Tahun Pengalaman Tim</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-image reveal-hidden parallax-layer" data-speed="0.3">
-        <div class="about-image-inner">
-          <div class="icon">⛏️</div>
-          <h3>Kalimantan<br>to The World</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     VISION & MISSION — Floating Cards
-     ============================================ -->
-<section id="vision-mission">
-  <div class="container">
-    <div class="section-label reveal-hidden">Vision & Mission</div>
-    <h2 class="section-title reveal-hidden">Arah & <span class="gold">Komitmen</span></h2>
-    <p class="section-subtitle reveal-hidden">Landasan kami dalam membangun kepercayaan dan keunggulan di industri batubara Indonesia.</p>
-
-    <div class="vm-grid">
-      <div class="vm-card reveal-hidden" data-direction="left">
-        <div class="vm-icon">🔭</div>
-        <h3>Visi</h3>
-        <p style="color:var(--text-secondary);line-height:1.7;">
-          Menjadi perusahaan perdagangan batubara terkemuka di Indonesia yang menjadi mitra pilihan bagi buyer domestik dan internasional, dengan mengedepankan kualitas, transparansi, dan keberlanjutan.
-        </p>
-      </div>
-      <div class="vm-card reveal-hidden" data-direction="right">
-        <div class="vm-icon">🎯</div>
-        <h3>Misi</h3>
-        <ul>
-          <li>Menyediakan batubara berkualitas sesuai spesifikasi buyer</li>
-          <li>Membangun kemitraan jangka panjang dengan tambang dan buyer</li>
-          <li>Mengelola rantai pasok secara efisien dan transparan</li>
-          <li>Mendukung industri energi nasional dengan pasokan stabil</li>
-          <li>Berkontribusi pada pertumbuhan ekonomi daerah operasional</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     PRODUCTS — Coal Grades
-     ============================================ -->
-<section id="products">
-  <div class="container">
-    <div class="section-label reveal-hidden">Our Products</div>
-    <h2 class="section-title reveal-hidden">Grade Batubara <span class="gold">Premium</span></h2>
-    <p class="section-subtitle reveal-hidden">Multi-grade batubara Kalimantan untuk berbagai kebutuhan industri dan pembangkit listrik.</p>
-
-    <div class="products-grid">
-      <div class="product-card reveal-hidden">
-        <div class="product-grade">3.800<span>kcal/kg</span><small>GCV (ARB)</small></div>
-        <ul class="product-specs">
-          <li>TM: 38–42%</li>
-          <li>Ash: 4–6%</li>
-          <li>TS: 0.2–0.5%</li>
-          <li>Size: 0–50mm</li>
-        </ul>
-      </div>
-      <div class="product-card featured reveal-hidden">
-        <div class="product-badge">Best Seller</div>
-        <div class="product-grade">4.200<span>kcal/kg</span><small>GCV (ARB)</small></div>
-        <ul class="product-specs">
-          <li>TM: 35–40%</li>
-          <li>Ash: 4–6%</li>
-          <li>TS: 0.2–0.6%</li>
-          <li>Size: 0–50mm</li>
-        </ul>
-      </div>
-      <div class="product-card reveal-hidden">
-        <div class="product-grade">4.600<span>kcal/kg</span><small>GCV (ARB)</small></div>
-        <ul class="product-specs">
-          <li>TM: 30–35%</li>
-          <li>Ash: 5–8%</li>
-          <li>TS: 0.2–0.5%</li>
-          <li>Size: 0–50mm</li>
-        </ul>
-      </div>
-      <div class="product-card reveal-hidden">
-        <div class="product-grade">5.000<span>kcal/kg</span><small>GCV (ARB)</small></div>
-        <ul class="product-specs">
-          <li>TM: 25–30%</li>
-          <li>Ash: 5–8%</li>
-          <li>TS: 0.5–1.0%</li>
-          <li>Size: 0–50mm</li>
-        </ul>
-      </div>
-      <div class="product-card reveal-hidden">
-        <div class="product-grade">5.500<span>kcal/kg</span><small>GCV (ARB)</small></div>
-        <ul class="product-specs">
-          <li>TM: 20–25%</li>
-          <li>Ash: 6–10%</li>
-          <li>TS: 0.5–1.0%</li>
-          <li>Size: 0–50mm</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     OPERATIONS — Timeline
-     ============================================ -->
-<section id="operations">
-  <div class="container">
-    <div class="section-label reveal-hidden">Operations</div>
-    <h2 class="section-title reveal-hidden">Alur <span class="gold">Operasional</span></h2>
-    <p class="section-subtitle reveal-hidden">Dari tambang ke buyer — setiap tahap dikelola dengan presisi untuk menjamin kualitas dan ketepatan waktu.</p>
-
-    <div class="timeline">
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 1</div>
-          <h3>Mine Selection</h3>
-          <p>Seleksi ketat mitra tambang di Kalimantan berdasarkan kualitas batubara, kapasitas produksi, dan rekam jejak operasional.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 2</div>
-          <h3>Quality Control</h3>
-          <p>Pengujian kualitas di laboratorium terakreditasi — GCV, TM, Ash, TS — memastikan batubara sesuai spesifikasi buyer.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 3</div>
-          <h3>Stockpile & Crusher</h3>
-          <p>Manajemen stockpile dengan sistem FIFO dan crushing sesuai ukuran yang diminta. Kapasitas hingga 500K MT/bulan.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 4</div>
-          <h3>Barge Loading</h3>
-          <p>Pemuatan ke tongkang (barge) melalui jetty conveyor — kapasitas 10.000–20.000 MT/hari per loading point.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 5</div>
-          <h3>Transshipment</h3>
-          <p>Transfer dari barge ke mother vessel di anchorage point. Floating crane dengan kapasitas 15.000 MT/hari.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-hidden">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-step">Step 6</div>
-          <h3>Delivery & Settlement</h3>
-          <p>Pengiriman ke buyer destination dengan dokumen lengkap (BL, CoA, CoO). Settlement transparan berdasarkan hasil surveyor independen.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     WHY US — 4 Pillars
-     ============================================ -->
-<section id="why-us">
-  <div class="container">
-    <div class="section-label reveal-hidden">Why Us</div>
-    <h2 class="section-title reveal-hidden">Mengapa <span class="gold">SIP?</span></h2>
-    <p class="section-subtitle reveal-hidden">Empat pilar yang membedakan kami di industri perdagangan batubara.</p>
-
-    <div class="pillars-grid">
-      <div class="pillar-card reveal-hidden">
-        <span class="pillar-icon">💎</span>
-        <h3>Quality</h3>
-        <p>Batubara berkualitas tinggi dengan GCV yang konsisten. Setiap shipment diuji di lab independen — spesifikasi sesuai kontrak, bukan janji.</p>
-      </div>
-      <div class="pillar-card reveal-hidden">
-        <span class="pillar-icon">📦</span>
-        <h3>Quantity</h3>
-        <p>Kapasitas supply hingga 500.000 MT/bulan dari jaringan tambang di Kalimantan. Tidak ada kontrak yang gagal karena kekurangan volume.</p>
-      </div>
-      <div class="pillar-card reveal-hidden">
-        <span class="pillar-icon">⏱️</span>
-        <h3>Timeline</h3>
-        <p>Komitmen jadwal yang ketat — dari pemesanan hingga pengiriman. Setiap tahap operasional dimonitor untuk memastikan ketepatan waktu.</p>
-      </div>
-      <div class="pillar-card reveal-hidden">
-        <span class="pillar-icon">🤝</span>
-        <h3>Settlement</h3>
-        <p>Transparansi penuh dalam pricing dan settlement. Berdasarkan hasil surveyor independen — tidak ada biaya tersembunyi, tidak ada kejutan.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     CONTACT + LEAD FORM
-     ============================================ -->
-<section id="contact">
-  <div class="container">
-    <div class="section-label reveal-hidden">Contact</div>
-    <h2 class="section-title reveal-hidden">Hubungi <span class="gold">Kami</span></h2>
-    <p class="section-subtitle reveal-hidden">Tertarik menjadi mitra? Tim kami siap mendiskusikan kebutuhan batubara Anda.</p>
-
-    <div class="contact-grid">
-      <div class="contact-form-card reveal-hidden" id="formCard">
-        <h3>Kirim Inquiry</h3>
-        <p class="sub">Isi form di bawah dan tim sales kami akan menghubungi Anda dalam 1×24 jam.</p>
-        <form id="leadForm">
-          <div class="form-group">
-            <label for="name">Nama Lengkap *</label>
-            <input type="text" id="name" placeholder="Nama Anda" required>
-            <div class="form-error" id="nameError">Nama wajib diisi.</div>
-          </div>
-          <div class="form-group">
-            <label for="phone">No. Telepon *</label>
-            <input type="tel" id="phone" placeholder="08xxxxxxxxxx" required minlength="10">
-            <div class="form-error" id="phoneError">No. telepon minimal 10 digit.</div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="anda@perusahaan.com">
-            <div class="form-error" id="emailError">Format email tidak valid.</div>
-          </div>
-          <div class="form-group">
-            <label for="message">Komentar / Kebutuhan *</label>
-            <textarea id="message" placeholder="Jelaskan kebutuhan batubara Anda — grade, volume, timeline..." required minlength="10"></textarea>
-            <div class="form-error" id="messageError">Komentar minimal 10 karakter.</div>
-          </div>
-          <button type="submit" class="form-submit" id="submitBtn">Kirim Inquiry →</button>
-        </form>
-        <div class="form-success" id="formSuccess">
-          <div class="icon">✅</div>
-          <h4>Inquiry Terkirim!</h4>
-          <p>Tim sales kami akan menghubungi Anda dalam 1×24 jam. Terima kasih atas ketertarikan Anda.</p>
-        </div>
-      </div>
-
-      <div class="contact-info reveal-hidden">
-        <div class="contact-info-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <h4>Alamat Kantor</h4>
-            <p>Jalan Cipinang Cempedak 3 No. 7A<br>RT 003 / RW 003, Jatinegara<br>Jakarta Timur 13340</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <h4>Telepon</h4>
-            <p>+62 21 1234 5678</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <h4>Email</h4>
-            <p>info@sinergiinvestama.co.id</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">🕐</div>
-          <div>
-            <h4>Jam Operasional</h4>
-            <p>Senin – Jumat: 08.00 – 17.00 WIB<br>Sabtu: 08.00 – 12.00 WIB</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     FOOTER
-     ============================================ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>PT. Sinergi Investama Prakasa</h3>
-        <p>Mitra strategis perdagangan batubara Indonesia. Menghubungkan energi Kalimantan ke pasar dunia dengan kualitas, transparansi, dan keandalan.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigasi</h4>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#operations">Operations</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Lainnya</h4>
-        <ul>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#vision-mission">Visi & Misi</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kontak</h4>
-        <ul>
-          <li>info@sinergiinvestama.co.id</li>
-          <li>+62 21 1234 5678</li>
-          <li>Jakarta Timur 13340</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2024–2026 PT. Sinergi Investama Prakasa. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<!-- GSAP + ScrollTrigger -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
 <script>
-/* ============================================
-   LOADING SCREEN
-   ============================================ */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loadingScreen').classList.add('hidden');
-  }, 600);
-});
-
-/* ============================================
-   HERO PARTICLES (Canvas)
-   ============================================ */
-(function() {
-  const canvas = document.getElementById('heroParticles');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let w, h;
-
-  function resize() {
-    w = canvas.width = canvas.offsetWidth;
-    h = canvas.height = canvas.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  for (let i = 0; i < 60; i++) {
-    particles.push({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      radius: Math.random() * 1.5 + 0.5,
-      speedY: Math.random() * 0.4 + 0.1,
-      speedX: (Math.random() - 0.5) * 0.2,
-      opacity: Math.random() * 0.4 + 0.1
-    });
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, w, h);
-    particles.forEach(p => {
-      p.y -= p.speedY;
-      p.x += p.speedX;
-      if (p.y < -10) { p.y = h + 10; p.x = Math.random() * w; }
-      if (p.x < -10) p.x = w + 10;
-      if (p.x > w + 10) p.x = -10;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(200,168,78,${p.opacity})`;
-      ctx.fill();
-    });
-    requestAnimationFrame(animate);
-  }
-  animate();
-})();
-
-/* ============================================
-   NAVBAR SCROLL EFFECT
-   ============================================ */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 80);
-});
-
-/* ============================================
-   MOBILE MENU
-   ============================================ */
-const mobileToggle = document.getElementById('mobileToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-mobileToggle.addEventListener('click', () => {
-  mobileToggle.classList.toggle('active');
-  mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileToggle.classList.remove('active');
-    mobileMenu.classList.remove('open');
-  });
-});
-
-/* ============================================
-   GSAP ScrollTrigger ANIMATIONS
-   ============================================ */
-gsap.registerPlugin(ScrollTrigger);
-
-// Reveal elements
-document.querySelectorAll('.reveal-hidden').forEach(el => {
-  gsap.fromTo(el,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-});
-
-// Bento cards staggered
-gsap.utils.toArray('.bento-card').forEach((card, i) => {
-  gsap.fromTo(card,
-    { opacity: 0, y: 50, scale: 0.95 },
-    {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.6,
-      delay: i * 0.08,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '#snapshot',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-});
-
-// About parallax
-gsap.to('.parallax-layer', {
-  y: -60,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '#about',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true
-  }
-});
-
-// Vision-Mission floating cards
-gsap.utils.toArray('.vm-card').forEach((card, i) => {
-  const dir = card.dataset.direction === 'left' ? -60 : 60;
-  gsap.fromTo(card,
-    { opacity: 0, x: dir, y: 40, rotation: dir > 0 ? 3 : -3 },
-    {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      rotation: 0,
-      duration: 0.9,
-      delay: i * 0.15,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '#vision-mission',
-        start: 'top 75%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-  // Subtle float on hover
-  card.addEventListener('mouseenter', () => {
-    gsap.to(card, { y: -12, duration: 0.4, ease: 'power2.out' });
-  });
-  card.addEventListener('mouseleave', () => {
-    gsap.to(card, { y: 0, duration: 0.6, ease: 'power2.out' });
-  });
-});
-
-// Product cards stagger
-gsap.utils.toArray('.product-card').forEach((card, i) => {
-  gsap.fromTo(card,
-    { opacity: 0, y: 80, scale: 0.9 },
-    {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.7,
-      delay: i * 0.12,
-      ease: 'back.out(1.4)',
-      scrollTrigger: {
-        trigger: '#products',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-});
-
-// Timeline items
-gsap.utils.toArray('.timeline-item').forEach((item, i) => {
-  gsap.fromTo(item,
-    { opacity: 0, x: i % 2 === 0 ? -40 : 40 },
-    {
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      delay: i * 0.12,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-});
-
-// Pillar cards
-gsap.utils.toArray('.pillar-card').forEach((card, i) => {
-  gsap.fromTo(card,
-    { opacity: 0, y: 60, scale: 0.92 },
-    {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.7,
-      delay: i * 0.13,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '#why-us',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    }
-  );
-});
-
-// Stat counter animation
-document.querySelectorAll('.stat-number').forEach(el => {
-  const target = parseInt(el.dataset.count);
-  if (!target) return;
-  let counted = false;
-  ScrollTrigger.create({
-    trigger: el,
-    start: 'top 85%',
-    onEnter: () => {
-      if (counted) return;
-      counted = true;
-      gsap.to(el, {
-        innerText: target,
-        duration: 2,
-        ease: 'power2.out',
-        snap: { innerText: 1 },
-        onUpdate: function() {
-          el.textContent = Math.round(this.targets()[0].innerText);
-        }
-      });
-    }
-  });
-});
-
-/* ============================================
-   FORM HANDLER
-   ============================================ */
-const leadForm = document.getElementById('leadForm');
-const formSuccess = document.getElementById('formSuccess');
-const submitBtn = document.getElementById('submitBtn');
-
-function showError(fieldId, errorId, show) {
-  document.getElementById(errorId).classList.toggle('visible', show);
-  document.getElementById(fieldId).style.borderColor = show ? '#e74c3c' : '';
-}
-
-leadForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  let valid = true;
-
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  // Validate
-  if (!name) { showError('name', 'nameError', true); valid = false; }
-  else { showError('name', 'nameError', false); }
-
-  if (!phone || phone.length < 10) { showError('phone', 'phoneError', true); valid = false; }
-  else { showError('phone', 'phoneError', false); }
-
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', 'emailError', true); valid = false; }
-  else { showError('email', 'emailError', false); }
-
-  if (!message || message.length < 10) { showError('message', 'messageError', true); valid = false; }
-  else { showError('message', 'messageError', false); }
-
-  if (!valid) return;
-
-  // Build lead data
-  const now = new Date();
-  const lead = {
-    id: 'SIP-' + now.toISOString().slice(0,10).replace(/-/g,'') + '-' + String(Math.floor(Math.random()*1000)).padStart(3,'0'),
-    name: name,
-    phone: phone,
-    email: email || '',
-    message: message,
-    timestamp: now.toISOString()
-  };
-
-  // Save to localStorage
-  const existing = JSON.parse(localStorage.getItem('sip_leads') || '[]');
-  existing.push(lead);
-  localStorage.setItem('sip_leads', JSON.stringify(existing));
-
-  // Attempt Telegram notification via Hermes webhook (non-blocking)
-  try {
-    fetch('https://api.telegram.org/bot/__TOKEN__/sendMessage', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: '__CHAT_ID__',
-        text: '🔔 *New SIP Lead!*\n\n' +
-          '📋 ID: ' + lead.id + '\n' +
-          '👤 Nama: ' + lead.name + '\n' +
-          '📞 Telp: ' + lead.phone + '\n' +
-          '📧 Email: ' + (lead.email || '-') + '\n' +
-          '💬 Komentar: ' + lead.message + '\n' +
-          '🕐 ' + lead.timestamp,
-        parse_mode: 'Markdown'
-      })
-    }).catch(() => {});
-  } catch(_) {}
-
-  // Show success
-  leadForm.style.display = 'none';
-  formSuccess.classList.add('show');
-
-  // Log to console for debugging
-  console.log('Lead saved:', lead);
-  console.log('All leads:', existing);
-});
+function hL(){var ls=document.getElementById('loadingScreen');if(ls)ls.classList.add('hidden')}window.addEventListener('load',function(){setTimeout(hL,800)});setTimeout(hL,3000);
+(function(){var n=document.getElementById('navbar'),h=document.getElementById('hamburger'),l=document.getElementById('navLinks');window.addEventListener('scroll',function(){window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled')});h.addEventListener('click',function(){l.classList.toggle('open')});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})})})();
+(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined')return;gsap.registerPlugin(ScrollTrigger);gsap.from('.hero-logo',{y:60,opacity:0,duration:1,delay:0.4});gsap.from('.hero-company',{y:40,opacity:0,duration:0.9,delay:0.6});gsap.from('.hero-tagline',{y:30,opacity:0,duration:0.8,delay:0.8});gsap.from('.hero-desc',{y:30,opacity:0,duration:0.8,delay:1.0});gsap.from('.hero-actions',{y:20,opacity:0,duration:0.7,delay:1.2});gsap.from('.hero-inquiry',{x:40,opacity:0,duration:0.9,delay:1.0});document.querySelectorAll('section').forEach(function(s){if(s.id==='hero'||s.id==='journey')return;gsap.from(s.querySelector('.section-label, .section-title, .section-subtitle'),{y:40,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:s,start:'top 80%',once:true}})});gsap.from('.matrix-card',{y:60,opacity:0,duration:0.8,stagger:0.15,scrollTrigger:{trigger:'#matrix',start:'top 75%',once:true}});gsap.from('.coord-card',{y:50,opacity:0,duration:0.7,stagger:0.15,scrollTrigger:{trigger:'#coordinates',start:'top 75%',once:true}});gsap.from('.corridor-map',{x:-40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.corridor-info',{x:40,opacity:0,duration:1,scrollTrigger:{trigger:'#corridor',start:'top 75%',once:true}});gsap.from('.coal-card',{y:50,opacity:0,duration:0.7,stagger:0.1,scrollTrigger:{trigger:'#coal-checker',start:'top 80%',once:true}});gsap.from('.docs-col',{y:40,opacity:0,duration:0.8,stagger:0.2,scrollTrigger:{trigger:'#docs',start:'top 75%',once:true}});gsap.from('.form-wrapper',{y:40,opacity:0,duration:0.8,scrollTrigger:{trigger:'#form',start:'top 80%',once:true}});gsap.from('.why-us-item',{y:30,opacity:0,duration:0.6,stagger:0.1,scrollTrigger:{trigger:'.why-us-grid',start:'top 85%',once:true}});gsap.from('.closing-block',{y:30,opacity:0,duration:0.8,scrollTrigger:{trigger:'.closing-block',start:'top 85%',once:true}})})();
+(function(){var cards=document.querySelectorAll('.float-card'),idx=-1;function focusCard(i){cards.forEach(function(c,j){c.classList.remove('focused');if(j===i){c.classList.add('focused');c.focus()}})}document.addEventListener('keydown',function(e){var a=document.activeElement;if(!a||!a.classList.contains('float-card'))return;var i=Array.from(cards).indexOf(a);if(i===-1)return;if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();focusCard((i+1)%cards.length)}else if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();focusCard((i-1+cards.length)%cards.length)}else if(e.key==='Enter'){e.preventDefault();a.classList.toggle('expanded')}else if(e.key==='Escape'){e.preventDefault();a.classList.remove('expanded');a.blur()}});cards.forEach(function(c){c.addEventListener('click',function(e){e.stopPropagation();var was=c.classList.contains('expanded');cards.forEach(function(x){x.classList.remove('expanded')});if(!was)c.classList.add('expanded')})});document.addEventListener('click',function(e){if(!e.target.closest('.floating-cards')){cards.forEach(function(x){x.classList.remove('expanded')})}})})();
+(function(){document.querySelectorAll('.coal-card').forEach(function(c){c.addEventListener('click',function(){document.querySelectorAll('.coal-card').forEach(function(x){x.classList.remove('highlight')});c.classList.add('highlight');if(c.getAttribute('data-grade')==='custom')window.location.href='#form'})})})();
+(function(){var t=document.getElementById('journeyTrack'),p=document.getElementById('journeyPrev'),n=document.getElementById('journeyNext'),cards=t?t.querySelectorAll('.journey-card'):[],sw=320+24;if(!t||!p||!n)return;p.addEventListener('click',function(){t.scrollBy({left:-sw*2,behavior:'smooth'})});n.addEventListener('click',function(){t.scrollBy({left:sw*2,behavior:'smooth'})});t.addEventListener('scroll',function(){var sl=t.scrollLeft,c=sl+t.offsetWidth/2,closest=null,cd=Infinity;cards.forEach(function(card){var step=card.closest('.journey-step'),cc=step.offsetLeft+step.offsetWidth/2,d=Math.abs(cc-c);if(d<cd){cd=d;closest=card}});cards.forEach(function(x){x.classList.remove('active')});if(closest)closest.classList.add('active')})})();
+(function(){var f=document.getElementById('coalForm'),s=document.getElementById('formSuccess');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d={id:'SIP-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+String(Math.floor(Math.random()*1000)).padStart(3,'0'),gar:document.getElementById('formGar').value,quantity:document.getElementById('formQty').value,term:document.getElementById('formTerm').value,destination:document.getElementById('formDest').value,laycan:document.getElementById('formLaycan').value,payment:document.getElementById('formPayment').value,name:document.getElementById('formName').value,email:document.getElementById('formEmail').value,notes:document.getElementById('formNotes').value,timestamp:new Date().toISOString()};var l=JSON.parse(localStorage.getItem('sip_leads')||'[]');l.push(d);localStorage.setItem('sip_leads',JSON.stringify(l));try{var m='\u{1F4E6} *New Coal Requirement!*\n\n\u{1F4CB} ID: '+d.id+'\n\u{1F4CD} GAR: '+d.gar+'\n\u{1F4E6} Qty: '+d.quantity+' MT\n\u{1F69A} Term: '+d.term+'\n\u{1F4CD} Dest: '+(d.destination||'-')+'\n\u{1F4C5} Laycan: '+d.laycan+'\n\u{1F4B3} Payment: '+(d.payment||'-')+'\n\u{1F464} Contact: '+d.name+' ('+d.email+')\n\u{1F4DD} Notes: '+(d.notes||'-')+'\n\u{1F552} '+d.timestamp;fetch('https://api.telegram.org/bot/__TOKEN__/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'__CHAT_ID__',text:m,parse_mode:'Markdown'})}).catch(function(){})}catch(_){}f.style.display='none';s.classList.add('show');console.log('Requirement saved:',d)})})();
+(function(){var b=document.getElementById('miniCheck');if(!b)return;b.addEventListener('click',function(){var g=document.getElementById('miniGar'),q=document.getElementById('miniQty'),e=document.getElementById('miniEmail'),fg=document.getElementById('formGar'),fq=document.getElementById('formQty'),fe=document.getElementById('formEmail');if(g&&fg)fg.value=g.value;if(q&&fq)fq.value=q.value;if(e&&fe)fe.value=e.value;window.location.hash='#form'})})();
+(function(){var b=document.querySelector('.hero-inquiry .btn-primary');if(b)b.addEventListener('click',function(){window.location.href='#form'})})();
+(function(){document.querySelectorAll('.coal-card .btn-outline').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();window.location.href='#form'})})})();
+(function(){var ctas=document.querySelectorAll('.float-cta'),links={'Explore Grades':'#coal-checker','Submit Requirement':'#form','Check Timeline':'#journey','View FOB Terms':'#docs'};ctas.forEach(function(c){c.addEventListener('click',function(e){e.stopPropagation();var t=c.textContent.trim();if(links[t])window.location.href=links[t]})})})();
 </script>
-
 </body>
 </html>

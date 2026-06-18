@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" fill="none">
+  <!-- Bulk carrier silhouette -->
+  <!-- Hull -->
+  <path d="M 15 100 C 15 90, 25 80, 40 75
+           L 360 75 C 375 80, 385 90, 385 100
+           L 385 120 C 385 130, 380 135, 370 135
+           L 30 135 C 20 135, 15 130, 15 120 Z"
+        fill="currentColor" opacity="0.85"/>
+  <!-- Deck -->
+  <rect x="40" y="65" width="320" height="10" fill="currentColor" opacity="0.7"/>
+  <!-- Bridge structure -->
+  <rect x="280" y="25" width="60" height="40" fill="currentColor" opacity="0.9"/>
+  <rect x="290" y="15" width="40" height="10" fill="currentColor" opacity="0.8"/>
+  <!-- Funnel -->
+  <rect x="310" y="5" width="12" height="10" fill="currentColor" opacity="0.6"/>
+  <!-- Cargo holds -->
+  <rect x="60" y="55" width="60" height="20" fill="currentColor" opacity="0.4" rx="3"/>
+  <rect x="140" y="55" width="60" height="20" fill="currentColor" opacity="0.4" rx="3"/>
+  <rect x="220" y="55" width="50" height="20" fill="currentColor" opacity="0.4" rx="3"/>
+  <!-- Bow -->
+  <path d="M 15 100 C 10 95, 8 88, 12 82 C 18 75, 28 76, 35 78"
+        fill="currentColor" opacity="0.7"/>
+  <!-- Waterline -->
+  <line x1="15" y1="100" x2="385" y2="100" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+</svg>
