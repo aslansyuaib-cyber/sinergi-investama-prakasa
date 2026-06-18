@@ -129,14 +129,6 @@ img { max-width: 100%; display: block; }
   gap: 12px;
 }
 .nav-logo img { height: 64px; width: auto; }
-.nav-logo span {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text-primary);
-  display: none;
-}
-@media (min-width: 480px) { .nav-logo span { display: inline; } }
 .nav-links {
   display: none;
   align-items: center;
@@ -277,6 +269,14 @@ img { max-width: 100%; display: block; }
   max-width: 900px;
   padding: 0 24px;
 }
+/* Hero logo */
+.hero-logo {
+  width: min(320px, 55vw);
+  height: auto;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.4));
+}
+
 .hero-tagline {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 7vw, 5rem);
@@ -998,8 +998,7 @@ section::before {
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="#" class="nav-logo">
-      <img src="assets/images/Logo%20PT.%20SIP.png" alt="PT. SIP Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-      <span>PT. SIP</span>
+      <img src="assets/images/Logo%20PT.%20SIP.png" alt="PT. SIP Logo" style="height:64px;width:auto;">
     </a>
     <ul class="nav-links">
       <li><a href="#snapshot">Snapshot</a></li>
@@ -1034,6 +1033,7 @@ section::before {
   <canvas class="hero-particles" id="heroParticles"></canvas>
   <div class="hero-overlay"></div>
   <div class="hero-content">
+    <img src="assets/images/BRAND%20LOGO%20PT%20SIP.png" alt="PT. Sinergi Investama Prakasa" class="hero-logo">
     <h1 class="hero-tagline">
       Energi <span class="gold">Indonesia</span>,<br>Menggerakkan Dunia
     </h1>
