@@ -155,7 +155,8 @@ section{position:relative;padding:100px 40px}
 .form-success{display:none;text-align:center;padding:32px;background:var(--glass-bg);border:1px solid var(--gold-400);border-radius:var(--radius);margin-top:16px}
 .form-success.show{display:block}
 .form-success h3{color:var(--gold-400);margin-bottom:8px}
-#contact{background:var(--navy-900)}
+#contact{background:url('assets/images/Home%20Office.png') center/cover no-repeat;background-attachment:fixed}
+#contact::before{content:'';position:absolute;inset:0;background:rgba(10,14,23,0.88);z-index:1}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
 .contact-item{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--glass-border)}
 .contact-item:last-child{border-bottom:none}
